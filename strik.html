@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
+    <title>Document</title>
+</head>
+
+<body id="bo">
+    <style>
+        body {
+            height: 1000px;
+            overflow: hidden;
+            background-image: linear-gradient(0deg, rgb(255, 177, 59), rgb(255, 177, 59), yellow);
+        }
+        
+        #strik1 {
+            width: 25px;
+            height: 50px;
+            background-color: black;
+            border-bottom: 10px solid yellow;
+            border-top: 10px solid red;
+            transform: translate(-50%, 50%);
+            left: 90%;
+            top: 75%;
+            position: absolute;
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+            transform: rotate(-70deg);
+            transition: 0.3s 0s;
+            box-shadow: 0px 0px 30px 5px orange;
+            opacity: 0%;
+        }
+        
+        #strik2 {
+            width: 25px;
+            height: 50px;
+            background-color: black;
+            border-bottom: 10px solid yellow;
+            border-top: 10px solid red;
+            transform: translate(-50%, 50%);
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+            transform: rotate(-110deg);
+            transition: 0.3s 0s;
+            box-shadow: 0px 0px 30px 5px orange;
+        }
+        
+        #strik3 {
+            width: 25px;
+            height: 50px;
+            background-color: black;
+            border-bottom: 10px solid yellow;
+            border-top: 10px solid red;
+            transform: translate(-50%, 50%);
+            left: 10%;
+            top: 75.7567546746%;
+            position: absolute;
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+            transform: rotate(70deg);
+            transition: 0.3s 0s;
+            box-shadow: 0px 0px 30px 5px orange;
+            opacity: 0%;
+        }
+        
+        #strik4 {
+            width: 25px;
+            height: 50px;
+            background-color: black;
+            border-bottom: 10px solid yellow;
+            border-top: 10px solid red;
+            transform: translate(-50%, 50%);
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+            transform: rotate(110deg);
+            transition: 0.3s 0s;
+            box-shadow: 0px 0px 30px 5px orange;
+        }
+        
+        #f1 {
+            width: 0%;
+            height: 10px;
+            background: red;
+            left: 10%;
+            top: 75.7567546746%;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            border-left: 100px solid red;
+            text-align: center;
+        }
+        
+        #f2 {
+            width: 10px;
+            height: 10px;
+            background: red;
+            position: absolute;
+            transform: translate(-50%, 50%);
+            left: 50%;
+            top: 60%;
+        }
+        
+        #f3 {
+            width: 0%;
+            height: 10px;
+            background: rgb(115, 255, 0);
+            position: absolute;
+            transform: translate(-50%, 50%);
+            left: 90%;
+            top: 75.7567546746%;
+            border-left: 100px solid rgb(115, 255, 0);
+        }
+        
+        #box1 {
+            width: 80px;
+            height: 20px;
+            padding: 2px;
+            border-radius: 20px;
+            background-color: rgb(37, 37, 37);
+            float: right;
+        }
+        
+        #mon1 {
+            width: auto;
+            height: 20px;
+            text-align: left;
+            margin-top: -17px;
+            margin-left: 6px;
+            color: aliceblue;
+        }
+        
+        #coin1 {
+            width: 18px;
+            height: 15px;
+            padding: 2px;
+            color: orange;
+            background-color: black;
+            border-radius: 20px;
+            text-align: center;
+            margin-left: 55px;
+        }
+        
+        #do1 {
+            width: 40px;
+            height: 40px;
+            background-color: brown;
+            border-radius: 20px;
+            padding: 5px;
+            border: transparent;
+            font-weight: 700;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 90%;
+            top: 40%;
+            color: aliceblue;
+        }
+        
+        #mo1 {
+            width: 40px;
+            height: 30px;
+            text-align: center;
+            background-color: brown;
+            border-radius: 50px;
+            padding-top: 10px;
+            border: transparent;
+            font-weight: 700;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 90%;
+            top: 40%;
+            color: aliceblue;
+            opacity: 40%;
+            z-index: -1;
+        }
+        
+        #mo2 {
+            width: 40px;
+            height: 30px;
+            text-align: center;
+            background-color: brown;
+            border-radius: 50px;
+            padding-top: 10px;
+            border: transparent;
+            font-weight: 700;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 10%;
+            top: 40%;
+            color: aliceblue;
+            opacity: 40%;
+            z-index: -1;
+        }
+        
+        #ham1 {
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            position: absolute;
+            transform: translate(-50%, 50%);
+            left: 90%;
+            top: 20%;
+            border-radius: 20px;
+            color: rgb(255, 155, 25);
+        }
+        
+        #box2 {
+            width: 80px;
+            height: 20px;
+            padding: 2px;
+            border-radius: 20px;
+            background-color: rgb(37, 37, 37);
+            float: left;
+        }
+        
+        #mon2 {
+            width: auto;
+            height: 20px;
+            text-align: left;
+            margin-top: -17px;
+            margin-left: 6px;
+            color: aliceblue;
+        }
+        
+        #coin2 {
+            width: 18px;
+            height: 15px;
+            padding: 2px;
+            color: orange;
+            background-color: black;
+            border-radius: 20px;
+            text-align: center;
+            margin-left: 55px;
+        }
+        
+        #do2 {
+            width: 40px;
+            height: 40px;
+            background-color: brown;
+            border-radius: 20px;
+            padding: 5px;
+            border: transparent;
+            font-weight: 700;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 10%;
+            top: 40%;
+            color: aliceblue
+        }
+        
+        #ham2 {
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            position: absolute;
+            transform: translate(-50%, 50%);
+            left: 10%;
+            top: 20%;
+            border-radius: 20px;
+            color: rgb(255, 155, 25);
+        }
+        
+        #strikd1 {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            position: absolute;
+            left: 90%;
+            top: 75%;
+            transition: 0.5s 0s;
+            transform: translate(-50%, 50%);
+        }
+        
+        #strikd2 {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            position: absolute;
+            left: 10%;
+            top: 75%;
+            transition: 0.5s 0s;
+            transform: translate(-50%, 50%);
+        }
+        
+        #d11 {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border-radius: 30px;
+            background-color: chartreuse;
+            color: black;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 95%;
+            top: 30%;
+            display: none;
+        }
+        
+        #d1 {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border-radius: 30px;
+            background-color: chartreuse;
+            color: black;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 95%;
+            top: 30%;
+            display: block;
+            opacity: 40%;
+            z-index: -1;
+        }
+        
+        #d22 {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border-radius: 30px;
+            background-color: chartreuse;
+            color: black;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 5%;
+            top: 30%;
+            display: none;
+        }
+        
+        #d2 {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border-radius: 30px;
+            background-color: chartreuse;
+            color: black;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 5%;
+            top: 30%;
+            display: block;
+            opacity: 40%;
+            z-index: -1;
+        }
+        
+        #sco1 {
+            width: auto;
+            height: 17px;
+            padding: 5px;
+            padding-top: 5px;
+            border-radius: 20px;
+            color: aliceblue;
+            background-color: black;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            text-align: center;
+            left: 56%;
+            top: 0%;
+        }
+        
+        #sco2 {
+            width: auto;
+            height: 17px;
+            padding: 5px;
+            padding-top: 5px;
+            border-radius: 20px;
+            color: aliceblue;
+            background-color: black;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            text-align: center;
+            left: 44%;
+            top: 0%;
+        }
+        
+        #num {
+            width: auto;
+            height: 17px;
+            padding: 5px;
+            padding-top: 5px;
+            border-radius: 20px;
+            color: rgb(255, 0, 0);
+            transform: translate(-50%, 50%);
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 0%;
+        }
+        
+        #pl1 {
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            font-size: 40px;
+            opacity: 0%;
+        }
+        
+        #pl2 {
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            font-size: 40px;
+            opacity: 0%;
+        }
+    </style>
+    <p style="float: right;display: none;" id="t2"></p>
+
+
+    <div id="f1"></div>
+    <div id="f2"></div>
+    <div id="f3"></div>
+    <div id="strik1">
+        <div id="c"></div>
+    </div>
+    <div id="strik3">
+        <div id="c1"></div>
+    </div>
+    <div id="strikd1">
+        <div id="def1"></div>
+    </div>
+    <div id="strikd2">
+        <div id="def2"></div>
+    </div>
+
+
+    <p style="display: none;" id="t1"></p>
+    <p style="display: none;" id="t3"></p>
+    <p style="display: none;" id="t4"></p>
+    <p style="display: none;" id="t5"></p>
+    <p style="display: none;" id="td1"></p>
+    <p style="display: none;" id="td2"></p>
+    <div id="box1">
+        <div id="coin1">$</div>
+        <div id="mon1">0</div>
+    </div>
+    <h1><button type="button" id="ham1">$</button></h1>
+    <div id="box2">
+        <div id="coin2">$</div>
+        <div id="mon2">0</div>
+    </div>
+    <h2><button type="button" id="ham2">$</button></h2>
+    <button type="button" id="do1">fire</button>
+    <div id="mo1">fire</div>
+    <button type="button" id="do2">fire</button>
+    <div id="mo2">fire</div>
+    <button type="button" id="d11">⁪╬</button>
+    <button type="button" id="d22">⁪╬</button>
+    <button type="button" id="d1">⁪╬</button>
+    <button type="button" id="d2">⁪╬</button>
+    <div id="sco1">0</div>
+    <div id="sco2">0</div>
+    <div id="num">- 20 -</div>
+    <div id="pl1">→</div>
+    <div id="pl2">←</div>
+    <script>
+        var d;
+
+        var MyBox, MySize, Result;
+
+        var MyBox11, MySize11, Result11;
+
+        var MyBox1, MySize1, Result1;
+
+        var MyBox2, MySize2, Result2;
+
+        var MyBoxd1, MySized1, Resultd1;
+
+        var MyBoxd2, MySized2, Resultd2;
+
+        //.................................
+
+        var Left11;
+        var Top11;
+
+        var Left1;
+        var Top1;
+        //.................................
+        var Left2;
+        var Top2;
+
+        var Left3;
+        var Top3;
+
+        var Left4;
+        var Top4;
+
+        //.................................
+
+        var Leftd1;
+        var Topd1;
+
+        var Leftd2;
+        var Topd2;
+
+        //.................................
+        var in1;
+        var in2;
+        //.................................
+        var a1 = 0;
+        var a2 = 0;
+
+        var score1 = 0;
+        var score2 = 0;
+
+        var b1 = true;
+        var b2 = true;
+
+        var do11 = true;
+        var do22 = true;
+
+        var check1 = 1;
+        var check2 = 1;
+
+        var int1;
+        var int2;
+
+        var c1 = localStorage.getItem("check1");
+        var c2 = localStorage.getItem("check2");
+        c1 = localStorage.setItem("check1", 1);
+        c2 = localStorage.setItem("check2", 1);
+        const h10 = document.querySelector('h1');
+        const h20 = document.querySelector('h2');
+        const d110 = document.getElementById("d11");
+        const d220 = document.getElementById("d22");
+        var do10 = document.getElementById("do1");
+        var do20 = document.getElementById("do2");
+
+        h10.addEventListener('touchend', handler1);
+
+        function handler1(event) {
+
+            score1 += 50;
+            mon1.innerHTML = score1;
+        }
+        h20.addEventListener('touchend', handler2);
+
+        function handler2(event) {
+
+            score2 += 50;
+            mon2.innerHTML = score2;
+        }
+
+
+
+
+
+
+
+        do10.addEventListener('touchend', handler5);
+
+        function handler5(event) {
+
+
+            localStorage.setItem("check1", 0);
+            c1 = localStorage.getItem("check1");
+            setTimeout(function() {
+                localStorage.setItem("check1", 1);
+                c1 = localStorage.getItem("check1");
+
+            }, 3000);
+
+            do11 = true;
+            ham1.disabled = do11;
+            ham1.style.opacity = "40%";
+
+            do22 = true;
+            ham2.disabled = do22;
+            ham2.style.opacity = "40%";
+
+            Top3 -= 5;
+            Left3 += 14;
+
+
+
+            strik1.style.left = Left3 + "px";
+
+
+            strik1.style.top = Top3 + "px";
+
+
+            strik1.style.opacity = "100%";
+
+            strik4.style.boxShadow = "0px 0px 0px 0px red ";
+
+
+
+            strik3.style.boxShadow = "0px 0px 0px 0px red ";
+
+        }
+
+
+        do20.addEventListener('touchend', handler6);
+
+        function handler6(event) {
+
+            localStorage.setItem("check2", 0);
+            c2 = localStorage.getItem("check2");
+            setTimeout(function() {
+                localStorage.setItem("check2", 1);
+                c2 = localStorage.getItem("check2");
+
+
+            }, 3000);
+            do11 = true;
+            ham1.disabled = do11;
+            ham1.style.opacity = "40%";
+
+            do22 = true;
+            ham2.disabled = do22;
+            ham2.style.opacity = "40%";
+
+            Top3 -= 15;
+            Left3 -= 22;
+
+
+
+            strik3.style.left = Left3 + "px";
+
+
+            strik3.style.top = Top3 + "px";
+
+
+            strik3.style.opacity = "100%";
+
+
+            strik4.style.boxShadow = "0px 0px 0px 0px red ";
+
+
+
+            strik3.style.boxShadow = "0px 0px 0px 0px red ";
+
+        }
+
+
+
+
+
+
+
+        function r11() {
+            MyBox11 = document.getElementById("c1");
+            Result11 = document.getElementById("t4");
+            MySize11 = MyBox11.getBoundingClientRect();
+            Result11.innerHTML =
+                "  Top: " + Math.round(MySize11.top) +
+                " <br >  Left: " + Math.round(MySize11.left) +
+                " <br > Width: " + Math.round(MySize11.width) +
+                " <br > Height: " + Math.round(MySize11.height);
+            Left11 = Math.round(MySize11.left);
+            Top11 = Math.round(MySize11.top);
+
+            if (Left11 == Left4 || Top11 == Top4) {
+
+                navigator.vibrate(200);
+                strik4.style.opacity = "10%";
+                score1 -= 500;
+                mon1.innerHTML = score1;
+
+                setTimeout(function() {
+                    strik4.style.boxShadow = "0px 0px 0px 0px red ";
+                }, 0);
+
+                setTimeout(function() {
+                    strik4.setAttribute("id", "strik3");
+                }, 0);
+                setTimeout(function() {
+                    strik3.style.left = "10%";
+                }, 0);
+                setTimeout(function() {
+                    strik4.style.transition = "0s 0s";
+                }, 0);
+
+                strik4.style.boxShadow = "0px 0px 150px 100px red ";
+                d11.style.display = "none";
+                b1 = true;
+                d11.disabled = b1;
+                do11 = false;
+                ham1.disabled = do11;
+                ham1.style.opacity = "100%";
+
+                do22 = false;
+                ham2.disabled = do22;
+                ham2.style.opacity = "100%";
+
+                a2++;
+                sco2.innerHTML = a2;
+
+            }
+            strik3.style.transition = "1s 0s";
+            strik3.style.boxShadow = "0px 0px 0px 0px orange ";
+            if (Left11 == Left3 || Top4 == Top11) {
+
+                strik3.setAttribute("id", "strik4");
+                Top4 -= 32;
+                Left4 -= 25;
+                strik4.style.left = Left4 + "px";
+                strik4.style.top = Top4 + "px";
+                setTimeout(function() {
+                    if (Leftd1 == Left11) {
+                        score1 += 200;
+
+                    } else {
+
+
+                        if (sco2.innerHTML >= 30 && sco1.innerHTML <= 30) {
+                            pl2.style.opacity = "100%";
+                            setTimeout(function() {
+                                bo.style.display = "none";
+                            }, 2000);
+
+                        }
+
+                    }
+
+                    if (score1 < 0) {
+                        score1 = 0;
+                        mon1.innerHTML = score1;
+                    }
+                    mon1.innerHTML = score1;
+                }, 900);
+                setTimeout(function() {
+                    if (score1 < 100) {
+                        d11.style.opacity = "40%";
+                        b1 = true;
+                        d11.disabled = b1;
+
+                    } else {
+                        d11.style.display = "block";
+                        b1 = false;
+                        d11.disabled = b1;
+
+                    }
+                }, 200);
+
+            }
+
+        }
+
+
+        setInterval(r11, 10);
+
+
+
+
+
+
+
+
+
+
+
+        function r() {
+            if (c1 == 0) {
+
+                do1.style.display = "none";
+            }
+            if (c1 == 1) {
+
+                do1.style.display = "block";
+            }
+            if (c2 == 0) {
+
+                do2.style.display = "none";
+            }
+            if (c2 == 1) {
+
+                do2.style.display = "block";
+            }
+            MyBox = document.getElementById("c");
+            Result = document.getElementById("t1");
+            MySize = MyBox.getBoundingClientRect();
+            Result.innerHTML =
+                "  Top: " + Math.round(MySize.top) +
+                " <br >  Left: " + Math.round(MySize.left) +
+                " <br > Width: " + Math.round(MySize.width) +
+                " <br > Height: " + Math.round(MySize.height);
+            Left1 = Math.round(MySize.left);
+            Top1 = Math.round(MySize.top);
+
+            if (Left1 == Left2 || Top1 == Top2) {
+                navigator.vibrate(200);
+                strik2.style.opacity = "0%";
+
+                score2 -= 500;
+                mon2.innerHTML = score2;
+
+                strik2.style.boxShadow = "0px 0px 150px 70px red ";
+                setTimeout(function() {
+                    strik2.style.boxShadow = "0px 0px 0px 0px red ";
+
+                }, 0);
+
+                setTimeout(function() {
+                    strik2.setAttribute("id", "strik1");
+                }, 0);
+                setTimeout(function() {
+
+                    strik1.style.left = "90%";
+                }, 0);
+                setTimeout(function() {
+                    strik2.style.transition = "0s 0s";
+                }, 0);
+                d22.style.display = "none";
+                b2 = true;
+                d22.disabled = b2;
+                do11 = false;
+                ham1.disabled = do11;
+                ham1.style.opacity = "100%";
+
+                do22 = false;
+                ham2.disabled = do22;
+                ham2.style.opacity = "100%";
+
+                a1++;
+                sco1.innerHTML = a1;
+            }
+
+            strik1.style.transition = "1s 0s";
+            strik1.style.boxShadow = "0px 0px 0px 0px red ";
+            if (Left1 == Left3) {
+                strik1.setAttribute("id", "strik2");
+                Top2 -= 41;
+                Left2 += 15;
+                strik2.style.left = Left2 + "px";
+                strik2.style.top = Top2 + "px";
+
+                setTimeout(function() {
+
+                    if (sco1.innerHTML >= 30 && sco2.innerHTML <= 30) {
+                        pl1.style.opacity = "100%";
+                        setTimeout(function() {
+                            bo.style.display = "none";
+                        }, 2000);
+
+                    }
+
+
+
+                    if (score2 < 0) {
+                        score2 = 0;
+                        mon2.innerHTML = score2;
+                    }
+
+                    mon2.innerHTML = score2;
+                }, 900);
+                setTimeout(function() {
+                    if (score2 < 200) {
+
+
+                        d22.style.display = "none";
+
+                    } else {
+
+                        b2 = false;
+                        d22.disabled = b2;
+                        d22.style.display = "block";
+
+                    }
+                }, 200);
+
+            }
+
+        }
+
+
+        setInterval(r, 10);
+
+
+
+
+
+        function r1() {
+            MyBox1 = document.getElementById("f1");
+            Result1 = document.getElementById("t2");
+            MySize1 = MyBox1.getBoundingClientRect();
+            Result1.innerHTML =
+
+                " 1 Top: " + Math.round(MySize1.top) +
+                " <br >  Left: " + Math.round(MySize1.left) +
+                " <br > Width: " + Math.round(MySize1.width) +
+                " <br > Height: " + Math.round(MySize1.height);
+            Left2 = Math.round(MySize1.left);
+            Top2 = Math.round(MySize1.top);
+
+        }
+        setInterval(r1, 0);
+
+        function r2() {
+            MyBox2 = document.getElementById("f2");
+            Result2 = document.getElementById("t3");
+            MySize2 = MyBox2.getBoundingClientRect();
+            Result2.innerHTML =
+
+                " 2 Top: " + Math.round(MySize2.top) +
+                " <br >  Left: " + Math.round(MySize2.left) +
+                " <br > Width: " + Math.round(MySize2.width) +
+                " <br > Height: " + Math.round(MySize2.height);
+            Left3 = Math.round(MySize2.left);
+            Top3 = Math.round(MySize2.top);
+
+
+        }
+        setInterval(r2, 0);
+
+        function r3() {
+            MyBox3 = document.getElementById("f3");
+            Result3 = document.getElementById("t5");
+            MySize3 = MyBox3.getBoundingClientRect();
+            Result3.innerHTML =
+
+                " 3 Top: " + Math.round(MySize3.top) +
+                " <br >  Left: " + Math.round(MySize3.left) +
+                " <br > Width: " + Math.round(MySize3.width) +
+                " <br > Height: " + Math.round(MySize3.height);
+            Left4 = Math.round(MySize3.left);
+            Top4 = Math.round(MySize3.top);
+
+
+        }
+        setInterval(r3, 0);
+
+        d110.addEventListener('touchend', handler3);
+
+        function handler3(event) {
+
+            do11 = false;
+            ham1.disabled = do11;
+            ham1.style.opacity = "100%";
+
+            do22 = false;
+            ham2.disabled = do22;
+            ham2.style.opacity = "100%";
+
+            setTimeout(function() {
+                d11.style.opacity = "40%";
+                d11.disabled = true;
+            }, 100);
+            in1 = setInterval(def11, 0);
+
+            score1 -= 200;
+            a2--;
+
+            strik4.style.opacity = "0%";
+            setTimeout(function() {
+                strik4.style.boxShadow = "0px 0px 0px 0px red ";
+            }, 500);
+            setTimeout(function() {
+                strik4.setAttribute("id", "strik3");
+            }, 600);
+            strik4.style.boxShadow = "0px 0px 80px 40px red ";
+            strik4.style.left = "10%";
+
+            strik3.style.left = "10%";
+            score1 += 500;
+        }
+
+
+
+
+
+
+
+
+
+
+        d11.style.display = "none";
+        d22.style.display = "none";
+
+        function def11() {
+            Left11 += 5;
+            Top11 -= 5;
+            Leftd1 = Left11;
+
+
+            if (Leftd1 == Left11 || Topd1 == Top11) {
+
+                strikd1.style.width = "100px";
+                setTimeout(function() {
+                    strikd1.style.width = "10px";
+                }, 800);
+                setTimeout(function() {
+                    clearInterval(in1);
+                    strikd3.style.left = "90%";
+                    strikd4.style.top = "75%";
+                }, 10);
+                d11.style.opacity = "40%";
+                b1 = true;
+                d11.display = "none";
+
+
+
+                setTimeout(function() {
+
+
+                    sco2.innerHTML = a2;
+                    if (a2 < 0) {
+                        a2 = 0;
+                        sco2.innerHTML = a2;
+                    }
+
+                    mon1.innerHTML = score1;
+                    if (score1 < 0) {
+                        score1 = 0;
+                        mon1.innerHTML = score1;
+                    }
+                }, 400);
+
+
+                strik4.style.transition = "0s 0s";
+                strik4.style.boxShadow = "0px 0px 50px 50px orange ";
+            } else {
+
+
+
+            }
+
+
+        }
+        d220.addEventListener('touchend', handler4);
+
+        function handler4(event) {
+
+            do11 = false;
+            ham1.disabled = do11;
+            ham1.style.opacity = "100%";
+
+            do22 = false;
+            ham2.disabled = do22;
+            ham2.style.opacity = "100%";
+
+            setTimeout(function() {
+                d22.style.display = "none";
+            }, 100);
+            in2 = setInterval(def22, 0.5);
+
+
+            strik2.style.opacity = "0%";
+            setTimeout(function() {
+                strik2.style.boxShadow = "0px 0px 0px 0px red ";
+            }, 500);
+            setTimeout(function() {
+                strik2.setAttribute("id", "strik1");
+            }, 600);
+            strik2.style.boxShadow = "0px 0px 80px 40px red ";
+            strik2.style.left = "90%";
+            strik1.style.left = "90%";
+            score2 -= 200;
+
+        }
+
+
+
+
+
+
+
+        function def22() {
+            Left1 -= 5;
+            Top1 -= 5;
+
+            Leftd2 = Left1;
+            strikd2.style.width = "100px";
+
+
+
+            setTimeout(function() {
+                strikd2.style.width = "10px";
+            }, 800);
+            if (Leftd2 == Left1 || Topd2 == Top1) {
+
+                clearInterval(in2);
+
+
+                setTimeout(function() {
+                    strikd2.style.left = "10%";
+                    strikd2.style.top = "75%";
+
+                }, 10);
+                d22.style.display = "none";
+                b2 = true;
+                d22.disabled = b2;
+
+                setTimeout(function() {
+
+
+
+                    sco1.innerHTML = a1;
+                    if (a1 < 0) {
+                        a1 = 0;
+                        sco1.innerHTML = a1;
+                    }
+
+                    mon2.innerHTML = score2;
+                    if (score2 < 0) {
+                        score2 = 0;
+                        mon2.innerHTML = score2;
+                    }
+                }, 400);
+
+
+                strik2.style.transition = "0s 0s";
+                strik2.style.boxShadow = "0px 0px 50px 50px orange ";
+            } else {
+
+
+            }
+        }
+
+
+        function rd1() {
+            MyBoxd1 = document.getElementById("def1");
+            Resultd1 = document.getElementById("td1");
+            MySized1 = MyBoxd1.getBoundingClientRect();
+            Resultd1.innerHTML =
+
+                "111  Top: " + Math.round(MySized1.top) +
+                " <br >  Left: " + Math.round(MySized1.left) +
+                " <br > Width: " + Math.round(MySized1.width) +
+                " <br > Height: " + Math.round(MySized1.height);
+            Leftd1 = Math.round(MySized1.left);
+            Topd1 = Math.round(MySized1.top);
+
+
+        }
+        setInterval(rd1, 0);
+
+
+        function rd2() {
+            MyBoxd2 = document.getElementById("def2");
+            Resultd2 = document.getElementById("td2");
+            MySized2 = MyBoxd2.getBoundingClientRect();
+            Resultd2.innerHTML =
+
+                "222 Top: " + Math.round(MySized2.top) +
+                " <br >  Left: " + Math.round(MySized2.left) +
+                " <br > Width: " + Math.round(MySized2.width) +
+                " <br > Height: " + Math.round(MySized2.height);
+            Leftd2 = Math.round(MySized2.left);
+            Topd2 = Math.round(MySized2.top);
+
+        }
+        setInterval(rd2, 0);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
