@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <style>
+        #body {
+            background: linear-gradient(red, blue);
+            height: 1000px;
+            overflow: hidden;
+        }
+        
+        #allbox {
+            width: 80%;
+            height: 450px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 48%;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            background-color: rgb(39, 39, 65);
+            opacity: 0%;
+            transition: 1s 0s;
+            z-index: 0;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+        }
+        
+        #a11 {
+            width: 60px;
+            height: 20px;
+            transform: translate(-50%, 50%) rotate(180deg);
+            position: absolute;
+            left: 80%;
+            top: 10%;
+            transition: 1s 0s;
+            border: transparent;
+            border-radius: 10px;
+            padding: 4px;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+        }
+        
+        #a21 {
+            width: 60px;
+            height: 20px;
+            transform: translate(-50%, 50%) rotate(180deg);
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            transition: 1s 0s;
+            border: transparent;
+            border-radius: 10px;
+            padding: 4px;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+        }
+        
+        #a31 {
+            width: 60px;
+            height: 20px;
+            transform: translate(-50%, 50%) rotate(180deg);
+            position: absolute;
+            left: 20%;
+            top: 10%;
+            transition: 1s 0s;
+            border: transparent;
+            border-radius: 10px;
+            padding: 4px;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+        }
+        
+        #a12 {
+            width: 60px;
+            height: 20px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 20%;
+            top: 85%;
+            transition: 1s 0s;
+            border: transparent;
+            border-radius: 10px;
+            padding: 4px;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+        }
+        
+        #a22 {
+            width: 60px;
+            height: 20px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 85%;
+            transition: 1s 0s;
+            border: transparent;
+            border-radius: 10px;
+            padding: 4px;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+        }
+        
+        #a32 {
+            width: 60px;
+            height: 20px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 80%;
+            top: 85%;
+            transition: 1s 0s;
+            border: transparent;
+            border-radius: 10px;
+            padding: 4px;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+        }
+        
+        #boxq {
+            width: 70%;
+            height: 13%;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            background-color: rgb(188, 190, 192);
+            margin: 0%;
+            padding: 0%;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 40px;
+        }
+        
+        #boxq1 {
+            width: 70%;
+            height: 13%;
+            transform: translate(-50%, 50%) rotate(180deg);
+            position: absolute;
+            left: 50%;
+            top: -6%;
+            margin: 0%;
+            padding: 0%;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 40px;
+            z-index: 10;
+            font-weight: 900;
+            transition: 1s 0s;
+        }
+        
+        #boxq2 {
+            width: 70%;
+            height: 13%;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: -4%;
+            margin: 0%;
+            padding: 0%;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 40px;
+            z-index: 10;
+            font-weight: 900;
+            transition: 1s 0s;
+        }
+        
+        #start {
+            width: 40%;
+            height: 60px;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            font-weight: 900;
+            background-color: cornflowerblue;
+            border: 2px solid rgb(13, 39, 156);
+            border-radius: 20px;
+            transition: 1s 0s;
+            z-index: 11;
+        }
+        
+        #s1 {
+            width: 0px;
+            height: 20px;
+            margin-top: 190px;
+            background-color: red;
+            text-align: center;
+            color: aliceblue;
+            display: none;
+            opacity: 0%;
+            transition: 1s 0.5s;
+            transform: rotate(180deg);
+        }
+        
+        #s2 {
+            width: 0px;
+            height: 20px;
+            margin-top: 55px;
+            background-color: blue;
+            text-align: center;
+            color: aliceblue;
+            display: none;
+            opacity: 0%;
+            transition: 1s 0.5s;
+        }
+        
+        #text {
+            transform: translate(-50%, 50%) rotate(-90deg);
+            position: absolute;
+            left: 70%;
+            top: 43%;
+            color: aliceblue;
+            z-index: -1;
+        }
+    </style>
+    <div id="text"></div>
+    <div id="allbox">
+        <button id="a11" onclick="a1()"></button>
+        <button id="a21" onclick="a2()"></button>
+        <button id="a31" onclick="a3()"></button>
+
+        <div id="boxq">
+            <div id="boxq1"></div>
+            <div id="boxq2"></div>
+        </div>
+        <button id="a" style="display: none;" onclick="a()"></button>
+
+        <button id="a12" onclick="b1()"></button>
+        <button id="a22" onclick="b2()"></button>
+        <button id="a32" onclick="b3()"></button>
+
+        <div id="s1">0</div>
+        <div id="s2">0</div>
+    </div>
+    <button id="start" onclick="startgame()">start</button>
+    <script>
+        var p;
+        var q1;
+        var q2;
+        var seticon;
+        var icon = "";
+        var q;
+        var m;
+        var test1 = 0;
+
+        function startgame() {
+
+
+            s1.style.display = "block";
+            s2.style.display = "block";
+            allbox.style.display = "block";
+            setTimeout(function() {
+                allbox.style.opacity = "100%";
+                s1.style.opacity = "100%";
+                s1.style.width = "40px";
+                s2.style.opacity = "100%";
+                s2.style.width = "40px";
+                if (test1 == 1) {
+                    s1.innerHTML = 0;
+                    s2.innerHTML = 0;
+                }
+            }, 1000);
+            start.style.opacity = "0%";
+            document.getElementById("a").click();
+            test1 = 0;
+        }
+
+        function a1() {
+            a11.disabled = true;
+            a21.disabled = true;
+            a31.disabled = true;
+            a12.disabled = true;
+            a22.disabled = true;
+            a32.disabled = true;
+            setTimeout(function() {
+                a11.style.opacity = "0%";
+                a21.style.opacity = "0%";
+                a31.style.opacity = "0%";
+                a12.style.opacity = "0%";
+                a22.style.opacity = "0%";
+                a32.style.opacity = "0%";
+                boxq1.style.opacity = "0%";
+                boxq2.style.opacity = "0%";
+
+            }, 1000);
+            setTimeout(function() {
+                document.getElementById("a").click();
+            }, 1900);
+            setTimeout(function() {
+                a11.style.opacity = "100%";
+                a21.style.opacity = "100%";
+                a31.style.opacity = "100%";
+                a12.style.opacity = "100%";
+                a22.style.opacity = "100%";
+                a32.style.opacity = "100%";
+                boxq1.style.opacity = "100%";
+                boxq2.style.opacity = "100%";
+                a32.disabled = false;
+                a11.disabled = false;
+                a21.disabled = false;
+                a31.disabled = false;
+                a12.disabled = false;
+                a22.disabled = false;
+                a11.style.backgroundColor = "white";
+                a21.style.backgroundColor = "white";
+                a31.style.backgroundColor = "white";
+                a12.style.backgroundColor = "white";
+                a22.style.backgroundColor = "white";
+                a32.style.backgroundColor = "white";
+            }, 2000);
+            if (a11.innerHTML == q) {
+                a11.style.backgroundColor = "green";
+                s1.innerHTML++;
+            }
+            if (a11.innerHTML != q) {
+                a11.style.backgroundColor = "red";
+                s2.innerHTML++;
+            }
+        }
+
+        function a2() {
+            a11.disabled = true;
+            a21.disabled = true;
+            a31.disabled = true;
+            a12.disabled = true;
+            a22.disabled = true;
+            a32.disabled = true;
+            setTimeout(function() {
+                a11.style.opacity = "0%";
+                a21.style.opacity = "0%";
+                a31.style.opacity = "0%";
+                a12.style.opacity = "0%";
+                a22.style.opacity = "0%";
+                a32.style.opacity = "0%";
+                boxq1.style.opacity = "0%";
+                boxq2.style.opacity = "0%";
+
+            }, 1000);
+            setTimeout(function() {
+                document.getElementById("a").click();
+            }, 1900);
+            setTimeout(function() {
+                a11.style.opacity = "100%";
+                a21.style.opacity = "100%";
+                a31.style.opacity = "100%";
+                a12.style.opacity = "100%";
+                a22.style.opacity = "100%";
+                a32.style.opacity = "100%";
+                boxq1.style.opacity = "100%";
+                boxq2.style.opacity = "100%";
+                a32.disabled = false;
+                a11.disabled = false;
+                a21.disabled = false;
+                a31.disabled = false;
+                a12.disabled = false;
+                a22.disabled = false;
+                a11.style.backgroundColor = "white";
+                a21.style.backgroundColor = "white";
+                a31.style.backgroundColor = "white";
+                a12.style.backgroundColor = "white";
+                a22.style.backgroundColor = "white";
+                a32.style.backgroundColor = "white";
+            }, 2000);
+            if (a21.innerHTML == q) {
+                a21.style.backgroundColor = "green";
+                s1.innerHTML++;
+            }
+            if (a21.innerHTML != q) {
+                a21.style.backgroundColor = "red";
+                s2.innerHTML++;
+            }
+        }
+
+        function a3() {
+            a11.disabled = true;
+            a21.disabled = true;
+            a31.disabled = true;
+            a12.disabled = true;
+            a22.disabled = true;
+            a32.disabled = true;
+            setTimeout(function() {
+                a11.style.opacity = "0%";
+                a21.style.opacity = "0%";
+                a31.style.opacity = "0%";
+                a12.style.opacity = "0%";
+                a22.style.opacity = "0%";
+                a32.style.opacity = "0%";
+                boxq1.style.opacity = "0%";
+                boxq2.style.opacity = "0%";
+
+            }, 1000);
+            setTimeout(function() {
+                document.getElementById("a").click();
+            }, 1900);
+            setTimeout(function() {
+                a11.style.opacity = "100%";
+                a21.style.opacity = "100%";
+                a31.style.opacity = "100%";
+                a12.style.opacity = "100%";
+                a22.style.opacity = "100%";
+                a32.style.opacity = "100%";
+                boxq1.style.opacity = "100%";
+                boxq2.style.opacity = "100%";
+                a32.disabled = false;
+                a11.disabled = false;
+                a21.disabled = false;
+                a31.disabled = false;
+                a12.disabled = false;
+                a22.disabled = false;
+                a11.style.backgroundColor = "white";
+                a21.style.backgroundColor = "white";
+                a31.style.backgroundColor = "white";
+                a12.style.backgroundColor = "white";
+                a22.style.backgroundColor = "white";
+                a32.style.backgroundColor = "white";
+            }, 2000);
+            if (a31.innerHTML == q) {
+                a31.style.backgroundColor = "green";
+                s1.innerHTML++;
+            }
+            if (a31.innerHTML != q) {
+                a31.style.backgroundColor = "red";
+                s2.innerHTML++;
+            }
+        }
+
+        function b1() {
+            a11.disabled = true;
+            a21.disabled = true;
+            a31.disabled = true;
+            a12.disabled = true;
+            a22.disabled = true;
+            a32.disabled = true;
+            setTimeout(function() {
+                a11.style.opacity = "0%";
+                a21.style.opacity = "0%";
+                a31.style.opacity = "0%";
+                a12.style.opacity = "0%";
+                a22.style.opacity = "0%";
+                a32.style.opacity = "0%";
+                boxq1.style.opacity = "0%";
+                boxq2.style.opacity = "0%";
+
+            }, 1000);
+            setTimeout(function() {
+                document.getElementById("a").click();
+            }, 1900);
+            setTimeout(function() {
+                a11.style.opacity = "100%";
+                a21.style.opacity = "100%";
+                a31.style.opacity = "100%";
+                a12.style.opacity = "100%";
+                a22.style.opacity = "100%";
+                a32.style.opacity = "100%";
+                boxq1.style.opacity = "100%";
+                boxq2.style.opacity = "100%";
+                a32.disabled = false;
+                a11.disabled = false;
+                a21.disabled = false;
+                a31.disabled = false;
+                a12.disabled = false;
+                a22.disabled = false;
+                a11.style.backgroundColor = "white";
+                a21.style.backgroundColor = "white";
+                a31.style.backgroundColor = "white";
+                a12.style.backgroundColor = "white";
+                a22.style.backgroundColor = "white";
+                a32.style.backgroundColor = "white";
+            }, 2000);
+            if (a12.innerHTML == q) {
+                a12.style.backgroundColor = "green";
+                s2.innerHTML++;
+            }
+            if (a12.innerHTML != q) {
+                a12.style.backgroundColor = "red";
+                s1.innerHTML++;
+            }
+        }
+
+        function b2() {
+            a11.disabled = true;
+            a21.disabled = true;
+            a31.disabled = true;
+            a12.disabled = true;
+            a22.disabled = true;
+            a32.disabled = true;
+            setTimeout(function() {
+                a11.style.opacity = "0%";
+                a21.style.opacity = "0%";
+                a31.style.opacity = "0%";
+                a12.style.opacity = "0%";
+                a22.style.opacity = "0%";
+                a32.style.opacity = "0%";
+                boxq1.style.opacity = "0%";
+                boxq2.style.opacity = "0%";
+
+            }, 1000);
+            setTimeout(function() {
+                document.getElementById("a").click();
+            }, 1900);
+            setTimeout(function() {
+                a11.style.opacity = "100%";
+                a21.style.opacity = "100%";
+                a31.style.opacity = "100%";
+                a12.style.opacity = "100%";
+                a22.style.opacity = "100%";
+                a32.style.opacity = "100%";
+                boxq1.style.opacity = "100%";
+                boxq2.style.opacity = "100%";
+                a32.disabled = false;
+                a11.disabled = false;
+                a21.disabled = false;
+                a31.disabled = false;
+                a12.disabled = false;
+                a22.disabled = false;
+                a11.style.backgroundColor = "white";
+                a21.style.backgroundColor = "white";
+                a31.style.backgroundColor = "white";
+                a12.style.backgroundColor = "white";
+                a22.style.backgroundColor = "white";
+                a32.style.backgroundColor = "white";
+            }, 2000);
+            if (a22.innerHTML == q) {
+                a22.style.backgroundColor = "green";
+                s2.innerHTML++;
+            }
+            if (a22.innerHTML != q) {
+                a22.style.backgroundColor = "red";
+                s1.innerHTML++;
+            }
+        }
+
+        function b3() {
+            a11.disabled = true;
+            a21.disabled = true;
+            a31.disabled = true;
+            a12.disabled = true;
+            a22.disabled = true;
+            a32.disabled = true;
+            setTimeout(function() {
+                a11.style.opacity = "0%";
+                a21.style.opacity = "0%";
+                a31.style.opacity = "0%";
+                a12.style.opacity = "0%";
+                a22.style.opacity = "0%";
+                a32.style.opacity = "0%";
+                boxq1.style.opacity = "0%";
+                boxq2.style.opacity = "0%";
+
+            }, 1000);
+            setTimeout(function() {
+                document.getElementById("a").click();
+            }, 1900);
+            setTimeout(function() {
+                a11.style.opacity = "100%";
+                a21.style.opacity = "100%";
+                a31.style.opacity = "100%";
+                a12.style.opacity = "100%";
+                a22.style.opacity = "100%";
+                a32.style.opacity = "100%";
+                boxq1.style.opacity = "100%";
+                boxq2.style.opacity = "100%";
+                a32.disabled = false;
+                a11.disabled = false;
+                a21.disabled = false;
+                a31.disabled = false;
+                a12.disabled = false;
+                a22.disabled = false;
+                a11.style.backgroundColor = "white";
+                a21.style.backgroundColor = "white";
+                a31.style.backgroundColor = "white";
+                a12.style.backgroundColor = "white";
+                a22.style.backgroundColor = "white";
+                a32.style.backgroundColor = "white";
+            }, 2000);
+            if (a32.innerHTML == q) {
+                a32.style.backgroundColor = "green";
+                s2.innerHTML++;
+            }
+            if (a32.innerHTML != q) {
+                a32.style.backgroundColor = "red";
+                s1.innerHTML++;
+            }
+        }
+
+        function a() {
+            p = Math.floor(Math.random() * (100 - 10) + 10);
+            seticon = Math.floor(Math.random() * (100 - 10) + 10);
+            q1 = Math.floor(Math.random() * (50 - 10) + 2);
+            q2 = Math.floor(Math.random() * (50 - 10) + 2);
+
+            if (seticon <= 20 && seticon >= 0) {
+                icon = "×";
+                q = q1 * q2;
+            }
+            if (seticon <= 60 && seticon >= 20) {
+                icon = "+";
+                q = q1 + q2;
+            }
+            if (seticon <= 100 && seticon >= 60) {
+                icon = "-";
+                q = q1 - q2;
+            }
+            if (q >= 0 && q <= 10) {
+                m = 2;
+            }
+            if (q >= 10 && q <= 20) {
+                m = 5;
+            }
+            if (q >= 20 && q <= 30) {
+                m = 8;
+            }
+            if (q >= 30 && q <= 40) {
+                m = 10;
+            }
+            if (q >= 40 && q <= 50) {
+                m = 14;
+            }
+            if (q >= 50 && q <= 60) {
+                m = 16;
+            }
+            if (q >= 60 && q <= 70) {
+                m = 19;
+            }
+            if (q >= 70 && q <= 80) {
+                m = 23;
+            }
+            if (q >= 80 && q <= 90) {
+                m = 27;
+            }
+            if (q >= 90 && q <= 100) {
+                m = 32;
+            }
+            if (q >= 100 && q <= 500) {
+                m = 53;
+            }
+            if (q >= 500 && q <= 1000) {
+                m = 77;
+            }
+
+            // a11.disabled = true;
+            // a21.disabled = true;
+            // a31.disabled = true;
+            // a12.disabled = true;
+            // a22.disabled = true;
+            // a32.disabled = true;
+
+            //place
+            if (p < 30 && p > 0) {
+                a11.innerHTML = q;
+                a21.innerHTML = q + m;
+                a31.innerHTML = q - m;
+                a12.innerHTML = q;
+                a22.innerHTML = q + m;
+                a32.innerHTML = q - m;
+            }
+            if (p < 60 && p > 30) {
+                a21.innerHTML = q;
+                a31.innerHTML = q - m;
+                a11.innerHTML = q + m;
+                a22.innerHTML = q;
+                a32.innerHTML = q - m;
+                a12.innerHTML = q + m;
+            }
+            if (p <= 100 && p >= 60) {
+                a31.innerHTML = q;
+                a11.innerHTML = q + m;
+                a21.innerHTML = q - m;
+                a32.innerHTML = q;
+                a12.innerHTML = q + m;
+                a22.innerHTML = q - m;
+            }
+
+            boxq1.innerHTML = q1 + "          " + icon + "           " + q2;
+            boxq2.innerHTML = q1 + "          " + icon + "           " + q2;
+        }
+
+        function test() {
+            if ((q1 < q2 && icon == "-") || (q1 < q2 && icon == "+")) {
+                document.getElementById("a").click();
+            }
+            if (q > 1000) {
+                document.getElementById("a").click();
+            }
+            if (s1.innerHTML == 10) {
+                allbox.style.opacity = "0%";
+                text.innerHTML = "red win";
+                start.style.opacity = "100%";
+                setTimeout(function() {
+                    allbox.style.display = "none";
+                }, 100);
+
+                test1 = 1;
+            }
+            if (s2.innerHTML == 10) {
+                allbox.style.opacity = "0%";
+                text.innerHTML = "blue win";
+                start.style.opacity = "100%";
+                setTimeout(function() {
+                    allbox.style.display = "none";
+                }, 100);
+                test1 = 1;
+            }
+        }
+        setInterval(test, 0);
+    </script>
+</body>
+
+</html>
+

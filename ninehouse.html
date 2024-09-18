@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body" onload="s()">
+    <style>
+        #body {
+            background: #09101c;
+            transition: 0.5s 0s;
+        }
+        
+        #p1 {
+            user-select: none;
+            cursor: pointer;
+        }
+        
+        #boxgame {
+            width: 170px;
+            height: 20px;
+            transform: translate(-45%, -408%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            opacity: 0%;
+            display: none;
+            z-index: 10;
+            transition: 0.5s 0s;
+        }
+        
+        #p1,
+        #p2,
+        #p3,
+        #p4,
+        #p5,
+        #p6,
+        #p7,
+        #p8,
+        #p9 {
+            width: 40px;
+            height: 20px;
+            text-align: center;
+            margin-top: 4px;
+            cursor: pointer;
+            font-size: 45px;
+            font-weight: 800;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-bottom: 16px;
+            padding-top: 9px;
+            background: transparent;
+            border: 2px solid black;
+            -webkit-text-stroke: 1.8px black;
+            -webkit-text-stroke-color: #000000;
+        }
+        
+        #restart {
+            width: 150px;
+            height: 40px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            font-size: 18px;
+            background: #aecc23;
+            border: transparent;
+            border-radius: 10px;
+            z-index: 10;
+            transition: 1s 0.5s;
+            cursor: pointer;
+            opacity: 0%;
+        }
+        
+        #time {
+            width: 20px;
+            height: 20px;
+            background: #090f1c;
+            border: transparent;
+            color: aliceblue;
+            font-size: 35px;
+            text-align: center;
+            border: 5px solid #aecc23;
+            padding: 30px;
+            border-radius: 80px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: none;
+            opacity: 0%;
+            transition: 0.5s 0s;
+        }
+        
+        #icon1 {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 85%;
+            width: 50px;
+            height: 44px;
+            background: #090f1c;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 7px;
+            opacity: 0%;
+            transition: 0.5s 0s;
+            color: aliceblue;
+            font-size: 27px;
+        }
+        
+        #icon2 {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            width: 50px;
+            height: 44px;
+            background: #090f1c;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 7px;
+            opacity: 0%;
+            transition: 0.5s 0s;
+            color: aliceblue;
+            font-size: 30px;
+        }
+        
+        #khat {
+            width: 0px;
+            border: 2px solid black;
+            background: #09101c;
+            transform: translate(-50%, -50%) rotate(0deg);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 10;
+            opacity: 0%;
+        }
+        
+        #winer {
+            width: auto;
+            transform: translate(-50%, -100%) rotate(-90deg);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 10;
+            color: aliceblue;
+            font-size: 33px;
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 10px;
+            opacity: 0%;
+            display: none;
+            transition: 1s 0s;
+        }
+    </style>
+    <button onclick="start()" id="restart">start</button>
+    <div id="boxgame">
+
+        <input type="text" value="" onclick="d1()" id="p1">
+        <input type="text" value="" onclick="d2()" id="p2">
+        <input type="text" value="" onclick="d3()" id="p3">
+        <input type="text" value="" onclick="d4()" id="p4">
+        <input type="text" value="" onclick="d5()" id="p5">
+        <input type="text" value="" onclick="d6()" id="p6">
+        <input type="text" value="" onclick="d7()" id="p7">
+        <input type="text" value="" onclick="d8()" id="p8">
+        <input type="text" value="" onclick="d9()" id="p9">
+    </div>
+    <div id="boxinformation">
+        <input type="text" id="time" value="5">
+    </div>
+    <div id="icon1"></div>
+    <div id="icon2"></div>
+    <h1 id="winer">blue win</h1>
+    <hr id="khat">
+    <script>
+        var timeadd = 5;
+        var pro;
+        var selectstartgame;
+        var select = 0;
+        var win = 0;
+
+        function s() {
+            restart.style.opacity = "100%";
+        }
+
+        function start() {
+            restart.style.filter = "drop-shadow(0px 0px 100px #aecc23)";
+            setTimeout(function() {
+                restart.style.opacity = "0%";
+                time.style.display = "block";
+            }, 1000);
+            setTimeout(function() {
+                time.style.opacity = "100%";
+                restart.style.display = "none";
+            }, 1600);
+            setTimeout(function() {
+                pro = setInterval(timedel, 1000);
+            }, 1800);
+            time.value = timeadd;
+            restart.style.transition = "1s 0s";
+        }
+
+        function timedel() {
+            if (timeadd > 0 && select == 0) {
+                timeadd--;
+                time.value = timeadd;
+                selectstartgame = Math.floor(Math.random() * (2 + 0));
+                selecticon = Math.floor(Math.random() * (2 + 0));
+                time.style.filter = "drop-shadow(0px 0px 10px #aecc23)";
+                setTimeout(function() {
+                    time.style.filter = "drop-shadow(0px 0px 0px #aecc23)";
+                }, 300);
+
+            }
+
+            if (timeadd == 0) {
+                select = 3;
+                boxgame.style.display = "block";
+                time.style.opacity = "0%";
+
+                setTimeout(function() {
+                    time.style.display = "none";
+                    timeadd = 5;
+                }, 800);
+
+
+                if (selectstartgame == 1) {
+                    select = 2;
+
+                    setTimeout(function() {
+                        body.style.background = "#df361a";
+                        icon1.style.opacity = "0%";
+                        icon2.style.opacity = "100%";
+                        icon2.innerHTML = "×";
+                        icon2.style.background = "#df361a";
+                    }, 1000);
+                }
+                if (selectstartgame == 0) {
+                    select = 1;
+
+                    setTimeout(function() {
+                        body.style.background = "#3877c0";
+                        icon2.style.opacity = "0%";
+                        icon1.style.opacity = "100%";
+                        icon1.innerHTML = "○";
+                        icon1.style.background = "#3877c0";
+
+                    }, 1000);
+                }
+
+
+
+                setTimeout(function() {
+                    selectstartgame = 2;
+                    boxgame.style.opacity = "100%";
+                    clearInterval(pro);
+
+                }, 1800);
+
+            }
+
+        }
+
+        function progame() {
+            if (win == 0) {
+                if (select == 1) {
+                    body.style.background = "#3877c0";
+                    icon2.style.opacity = "0%";
+                    icon1.style.opacity = "100%";
+                    icon1.innerHTML = "○";
+                    icon1.style.background = "#3877c0";
+                    boxgame.style.opacity = "100%";
+                }
+                if (select == 2) {
+                    body.style.background = "#df361a";
+                    icon1.style.opacity = "0%";
+                    icon2.style.opacity = "100%";
+                    icon2.innerHTML = "×";
+                    icon2.style.background = "#df361a";
+                    boxgame.style.opacity = "100%";
+                }
+
+                if (p1.value == "○" && p2.value == "○" && p3.value == "○") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-50% , -1550%) rotate(0deg)";
+                    khat.style.opacity = "80%";
+                    win = 1;
+                }
+                if (p4.value == "○" && p5.value == "○" && p6.value == "○") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-50% , -300%) rotate(0deg)";
+                    khat.style.opacity = "80%";
+                    win = 1;
+                }
+                if (p7.value == "○" && p8.value == "○" && p9.value == "○") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-50% , 1100%) rotate(0deg)";
+                    khat.style.opacity = "80%";
+                    win = 1;
+                }
+                if (p1.value == "○" && p4.value == "○" && p7.value == "○") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-88% , -200%) rotate(90deg)";
+                    khat.style.opacity = "80%";
+                    win = 1;
+                }
+                if (p2.value == "○" && p5.value == "○" && p8.value == "○") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-50% , -200%) rotate(90deg)";
+                    khat.style.opacity = "80%";
+                    win = 1;
+                }
+                if (p3.value == "○" && p6.value == "○" && p9.value == "○") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-12% , -200%) rotate(90deg)";
+                    khat.style.opacity = "80%";
+                    win = 1;
+                }
+                if (p1.value == "○" && p5.value == "○" && p9.value == "○") {
+                    khat.style.width = "180px";
+                    khat.style.transform = "translate(-50% , -200%) rotate(45deg)";
+                    khat.style.opacity = "80%";
+                    win = 1;
+                }
+                if (p3.value == "○" && p5.value == "○" && p7.value == "○") {
+                    khat.style.width = "180px";
+                    khat.style.transform = "translate(-50% , -200%) rotate(-45deg)";
+                    khat.style.opacity = "80%";
+                    win = 1;
+                }
+
+                //...........................................................................
+
+
+                if (p1.value == "×" && p2.value == "×" && p3.value == "×") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-50% , -1600%) rotate(0deg)";
+                    khat.style.opacity = "80%";
+                    win = 2;
+                }
+                if (p4.value == "×" && p5.value == "×" && p6.value == "×") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-50% , -300%) rotate(0deg)";
+                    khat.style.opacity = "80%";
+                    win = 2;
+                }
+                if (p7.value == "×" && p8.value == "×" && p9.value == "×") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-50% , 1100%) rotate(0deg)";
+                    khat.style.opacity = "80%";
+                    win = 2;
+                }
+                if (p1.value == "×" && p4.value == "×" && p7.value == "×") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-88% , -200%) rotate(90deg)";
+                    khat.style.opacity = "80%";
+                    win = 2;
+                }
+                if (p2.value == "×" && p5.value == "×" && p8.value == "×") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-50% , -200%) rotate(90deg)";
+                    khat.style.opacity = "80%";
+                    win = 2;
+                }
+                if (p3.value == "×" && p6.value == "×" && p9.value == "×") {
+                    khat.style.width = "130px";
+                    khat.style.transform = "translate(-12% , -200%) rotate(90deg)";
+                    khat.style.opacity = "80%";
+                    win = 2;
+                }
+                if (p1.value == "×" && p5.value == "×" && p9.value == "×") {
+                    khat.style.width = "180px";
+                    khat.style.transform = "translate(-50% , -200%) rotate(45deg)";
+                    khat.style.opacity = "80%";
+                    win = 2;
+                }
+                if (p3.value == "×" && p5.value == "×" && p7.value == "×") {
+                    khat.style.width = "180px";
+                    khat.style.transform = "translate(-50% , -200%) rotate(-45deg)";
+                    khat.style.opacity = "80%";
+                    win = 2;
+                }
+            }
+            if (win == 1) {
+
+
+                setTimeout(function() {
+                    body.style.background = "#09101c";
+                    boxgame.style.opacity = "0%";
+                    icon1.style.opacity = "0%";
+                    icon2.style.opacity = "0%";
+                    winer.style.opacity = "100%";
+                    winer.style.display = "block";
+                    winer.innerHTML = "blue win";
+                    khat.style.opacity = "0%";
+                }, 1500);
+
+                setTimeout(function() {
+                    winer.style.opacity = "0%";
+                }, 3000);
+                setTimeout(function() {
+                    location.reload();
+                }, 4000);
+
+            }
+            if (win == 2) {
+                winer.innerHTML = "red win";
+                setTimeout(function() {
+                    body.style.background = "#09101c";
+                    boxgame.style.opacity = "0%";
+                    icon1.style.opacity = "0%";
+                    icon2.style.opacity = "0%";
+                    winer.style.opacity = "100%";
+                    winer.style.display = "block";
+                    winer.innerHTML = "red win";
+                    khat.style.opacity = "0%";
+                }, 1500);
+
+                setTimeout(function() {
+                    winer.style.opacity = "0%";
+                }, 3000);
+                setTimeout(function() {
+                    location.reload();
+                }, 4000);
+            }
+            if (p1.value != "" &&
+                p2.value != "" &&
+                p3.value != "" &&
+                p4.value != "" &&
+                p5.value != "" &&
+                p6.value != "" &&
+                p7.value != "" &&
+                p8.value != "" &&
+                p9.value != "") {
+                boxgame.style.opacity = "0%";
+                setTimeout(function() {
+                    p1.value = "";
+                    p2.value = "";
+                    p3.value = "";
+                    p4.value = "";
+                    p5.value = "";
+                    p6.value = "";
+                    p7.value = "";
+                    p8.value = "";
+                    p9.value = "";
+                    p1.disabled = false;
+                    p2.disabled = false;
+                    p3.disabled = false;
+                    p4.disabled = false;
+                    p5.disabled = false;
+                    p6.disabled = false;
+                    p7.disabled = false;
+                    p8.disabled = false;
+                    p9.disabled = false;
+                }, 1000);
+                setTimeout(function() {
+                    boxgame.style.opacity = "100%";
+                }, 1500);
+
+            }
+        }
+        setInterval(progame, 100);
+
+        function d1() {
+
+            document.getElementById('p1').blur();
+            if (select == 1) {
+                select = 2;
+                p1.value = "○";
+                p1.style.color = "#3877c0";
+            } else if (select == 2) {
+                select = 1;
+                p1.value = "×";
+                p1.style.color = "#df361a";
+            }
+            p1.disabled = true;
+
+
+
+
+        }
+
+        function d2() {
+
+            document.getElementById('p2').blur();
+            if (select == 1) {
+                select = 2;
+                p2.value = "○";
+                p2.style.color = "#3877c0";
+            } else if (select == 2) {
+                select = 1;
+                p2.value = "×";
+                p2.style.color = "#df361a";
+
+            }
+            p2.disabled = true;
+
+
+        }
+
+        function d3() {
+
+            document.getElementById('p3').blur();
+            if (select == 1) {
+                select = 2;
+                p3.value = "○";
+                p3.style.color = "#3877c0";
+            } else if (select == 2) {
+                select = 1;
+                p3.value = "×";
+                p3.style.color = "#df361a";
+            }
+            p3.disabled = true;
+
+
+        }
+
+        function d4() {
+
+            document.getElementById('p4').blur();
+            if (select == 1) {
+                select = 2;
+                p4.value = "○";
+                p4.style.color = "#3877c0";
+            } else if (select == 2) {
+                select = 1;
+                p4.value = "×";
+                p4.style.color = "#df361a";
+            }
+            p4.disabled = true;
+
+
+        }
+
+        function d5() {
+
+            document.getElementById('p5').blur();
+            if (select == 1) {
+                select = 2;
+                p5.value = "○";
+                p5.style.color = "#3877c0";
+            } else if (select == 2) {
+                select = 1;
+                p5.value = "×";
+                p5.style.color = "#df361a";
+            }
+            p5.disabled = true;
+
+
+        }
+
+        function d6() {
+
+            document.getElementById('p6').blur();
+            if (select == 1) {
+                select = 2;
+                p6.value = "○";
+                p6.style.color = "#3877c0";
+            } else if (select == 2) {
+                select = 1;
+                p6.value = "×";
+                p6.style.color = "#df361a";
+            }
+            p6.disabled = true;
+
+
+        }
+
+        function d7() {
+
+            document.getElementById('p7').blur();
+            if (select == 1) {
+                select = 2;
+                p7.value = "○";
+                p7.style.color = "#3877c0";
+            } else if (select == 2) {
+                select = 1;
+                p7.value = "×";
+                p7.style.color = "#df361a";
+            }
+            p7.disabled = true;
+
+        }
+
+        function d8() {
+
+            document.getElementById('p8').blur();
+            if (select == 1) {
+                select = 2;
+                p8.value = "○";
+                p8.style.color = "#3877c0";
+            } else if (select == 2) {
+                select = 1;
+                p8.value = "×";
+                p8.style.color = "#df361a";
+            }
+            p8.disabled = true;
+
+        }
+
+        function d9() {
+
+            document.getElementById('p9').blur();
+            if (select == 1) {
+                select = 2;
+                p9.value = "○";
+                p9.style.color = "#3877c0";
+            } else if (select == 2) {
+                select = 1;
+                p9.value = "×";
+                p9.style.color = "#df361a";
+            }
+            p9.disabled = true;
+
+        }
+    </script>
+</body>
+
+</html>
+
+</html>
+
+</html>
+
+</html>

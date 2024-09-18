@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <title>Document</title>
+</head>
+
+<body id="body" onload="numbers()">
+    <style onload="numbers()">
+        #body {
+            overflow: hidden;
+            background-color: #755137;
+            color: aliceblue;
+        }
+        
+        #col {
+            width: 100px;
+            height: 100px;
+            transform: rotate(90deg) translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: 2000px;
+            z-index: -1;
+            transition: 0.5s 0s;
+            background-color: blue;
+        }
+        
+        #a1 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #a2 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #a3 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #a4 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #a5 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #a6 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #a7 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #a8 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #a9 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #a10 {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin-top: 120px;
+            position: relative;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px red;
+        }
+        
+        #element {
+            width: 20px;
+            height: 20px;
+            background-color: rgb(0, 238, 255);
+            transform: translate(-50%, -80%);
+            position: absolute;
+            left: 10%;
+            top: 51%;
+            transition: 0s 0s;
+            border-radius: 5px;
+            border: 0px solid hsl(0, 0%, 0%);
+            z-index: 0;
+            box-shadow: 0px 0px 10px 1px rgb(0, 238, 255);
+        }
+        
+        #do1 {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(75, 75, 75);
+            margin-top: 120px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            font-size: 22px;
+            border: transparent;
+            border-radius: 40px;
+            z-index: -0;
+            -moz-userselect: none;
+            transition: 0.2s 0s;
+            color: rgb(168, 168, 168);
+            box-shadow: 0px 0px 20px 5px white;
+        }
+        
+        #backlose {
+            width: 100%;
+            height: 995px;
+            background-color: rgb(187, 19, 19);
+            box-sizing: content-box;
+            z-index: 10;
+            opacity: 0%;
+            display: none;
+            transition: 0.5s 0s;
+        }
+        
+        #textlose {
+            width: 200px;
+            height: auto;
+            background-color: rgb(233, 233, 233);
+            color: black;
+            opacity: 0%;
+            padding: 10px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            transition: 0.5s 0s;
+        }
+        
+        #losetime {
+            width: 80px;
+            text-align: center;
+            transition: 0.5s 0s;
+            transform: translate(10%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            z-index: 11;
+            opacity: 0%;
+        }
+        
+        #loseoldtime {
+            width: 80px;
+            text-align: center;
+            transition: 0.5s 0s;
+            transform: translate(-110%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            z-index: 11;
+            opacity: 0%;
+        }
+        
+        #time {
+            width: 30%;
+            float: right;
+            text-align: center;
+            transition: 0.5s 0s;
+            border-radius: 20px;
+            border: transparent;
+        }
+        
+        #oldtime {
+            width: 30%;
+            float: left;
+            text-align: center;
+            transition: 0.5s 0s;
+            border-radius: 20px;
+            border: transparent;
+        }
+        
+        #start1 {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            opacity: 0%;
+            display: none;
+            transition: 0.5s 0s;
+        }
+        
+        #write1,
+        #write2,
+        #write3,
+        #write4,
+        #write5,
+        #write6,
+        #write7,
+        #write8,
+        #write9,
+        #write10,
+        #write {
+            display: none;
+        }
+        
+        #text1 {
+            width: 30%;
+            text-align: center;
+            float: left;
+            font-size: 80%;
+            border: 1px solid white;
+            padding: 2px;
+            border-radius: 20px;
+        }
+        
+        #text2 {
+            width: 30%;
+            text-align: center;
+            float: right;
+            font-size: 80%;
+            border: 1px solid white;
+            padding: 2px;
+            border-radius: 20px;
+        }
+        
+        #boxpart {
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, 100%);
+            position: absolute;
+            left: 50%;
+            top: -5%;
+            border-radius: 100px;
+            border: 2px solid green;
+            text-align: center;
+            z-index: -1;
+            transition: 0.6s 0s;
+        }
+        
+        #textpart {
+            margin-top: 20px;
+        }
+    </style>
+    <input id="losetime" type="text" value="0" />
+    <input id="loseoldtime" type="text" value="0" />
+    <div id="backlose"></div>
+    <p id="textlose">شما باختی</p>
+
+    <input id="oldtime" type="text" value="0" />
+    <div style="display: none" id="oldtime1">0</div>
+
+    <label for="time"></label>
+
+    <input id="time" type="text" value="0" />
+    <div style="display: none" id="tim">0</div>
+    <p id="w"></p>
+    <center>
+        <div id="col">
+            <h3 id="a1"></h3>
+            <h3 id="a2"></h3>
+            <h3 id="a3"></h3>
+            <h3 id="a4"></h3>
+            <h3 id="a5"></h3>
+            <h3 id="a6"></h3>
+            <h3 id="a7"></h3>
+            <h3 id="a8"></h3>
+            <h3 id="a9"></h3>
+            <h3 id="a10"></h3>
+        </div>
+    </center>
+    <span id="MouseX"></span><br />
+
+    <span id="MouseY"></span>
+    <div id="write1"></div>
+    <div id="write2"></div>
+    <div id="write3"></div>
+    <div id="write4"></div>
+    <div id="write5"></div>
+    <div id="write6"></div>
+    <div id="write7"></div>
+    <div id="write8"></div>
+    <div id="write9"></div>
+    <div id="write10"></div>
+
+    <div id="write"></div>
+    <div id="element"></div>
+    <button id="do1" unselectable="on" onclick="jamp()">Tab</button>
+    <button id="start1" onclick="str()">شروع دوباره</button>
+    <p id="text1">امتیاز ماندگار</p>
+    <p id="text2">امتیاز</p>
+    <div id="boxpart">
+        <p id="part">0</p>
+        <p id="textpart">مرحله</p>
+    </div>
+    <script>
+        var Left;
+        var Top;
+
+        var Left1e;
+        var Left1;
+        var Top1e;
+        var Top1;
+
+        var Left2e;
+        var Left2;
+        var Top2e;
+        var Top2;
+
+        var Left3e;
+        var Left3;
+        var Top3e;
+        var Top3;
+
+        var Left4e;
+        var Left4;
+        var Top4e;
+        var Top4;
+
+        var Left5e;
+        var Left5;
+        var Top5e;
+        var Top5;
+
+        var Left6e;
+        var Left6;
+        var Top6e;
+        var Top6;
+
+        var Left7e;
+        var Left7;
+        var Top7e;
+        var Top7;
+
+        var Left8e;
+        var Left8;
+        var Top8e;
+        var Top8;
+
+        var Left9e;
+        var Left9;
+        var Top9e;
+        var Top9;
+
+        var Left10e;
+        var Left10;
+        var Top10e;
+        var Top10;
+
+        var p1 = 0;
+        var p2 = 0;
+        var p3 = 0;
+        var p4 = 0;
+        var p5 = 0;
+        var p6 = 0;
+        var p7 = 0;
+        var p8 = 0;
+        var p9 = 0;
+        var p10 = 0;
+
+        var time2 = 0;
+        var tim1 = 0;
+
+        /*var IE = document.all ? true : false;
+                                                                                                                      if (!IE) document.captureEvents(Event.MOUSEMOVE);
+                                                                                                                      document.onmousemove = getMouseXY;
+                                                                                                                      var tempX = 0;
+                                                                                                                      var tempY = 0;
+
+                                                                                                                      function getMouseXY(e) {
+                                                                                                                          if (IE) {
+                                                                                                                              tempX = event.clientX + document.body.scrollLeft;
+                                                                                                                              tempY = event.clientY + document.body.scrollTop;
+                                                                                                                          } else {
+                                                                                                                              tempX = e.pageX;
+                                                                                                                              tempY = e.pageY;
+                                                                                                                          }
+                                                                                                                          if (tempX < 0) {
+                                                                                                                              tempX = 0;
+                                                                                                                          }
+                                                                                                                          if (tempY < 0) {
+                                                                                                                              tempY = 0;
+                                                                                                                          }
+                                                                                                                          document.getElementById("MouseX").innerHTML = tempX;
+                                                                                                                          document.getElementById("MouseY").innerHTML = tempY;
+                                                                                                                          return true;
+                                                                                                                      }*/
+        var down1;
+        var na1;
+
+        function numbers() {
+
+            tim1 = localStorage.getItem("time1");
+            oldtime1.innerHTML = tim1;
+            time2 = localStorage.getItem("time");
+            tim.innerHTML = time2;
+            boxpart.style.scale = "1.4";
+            boxpart.style.left = "52%";
+
+            setTimeout(function() {
+
+                boxpart.style.scale = "1";
+                boxpart.style.left = "50%";
+
+            }, 1000);
+
+        }
+
+        function load() {
+
+            location.reload();
+
+        }
+        var clearload = setInterval(load, 30200);
+        var speed = setInterval(s1, localStorage.getItem("speed1"));
+
+        function time11() {
+            time2++;
+            time.value = time2;
+            oldtime.value = tim1;
+
+            localStorage.setItem("time", time.value);
+
+            time2 = localStorage.getItem("time");
+
+            tim.innerHTML = time2;
+            localStorage.setItem("time1", tim1);
+
+            tim1 = localStorage.getItem("time1");
+
+            oldtime.innerHTML = tim1;
+
+            if (time2 >= 0 && time2 <= 100) {
+                na1 = 1;
+                down1 = 400;
+                element.style.transition = na1 + "s" + " " + "0s";
+
+                localStorage.setItem("speed1", 100);
+                localStorage.setItem("down1", 18000);
+                part.innerHTML = "1";
+            }
+            if (time2 >= 100 && time2 <= 200) {
+                na1 = 1;
+                down1 = 400;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 95);
+                localStorage.setItem("down1", 18000);
+
+                localStorage.setItem("time1", 100);
+                tim1 = 100;
+                part.innerHTML = "2";
+            }
+            if (time2 >= 200 && time2 <= 300) {
+                na1 = 1;
+                down1 = 400;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 90);
+                localStorage.setItem("down1", 16000);
+
+                localStorage.setItem("time1", 200);
+                tim1 = 200;
+                part.innerHTML = "3";
+            }
+            if (time2 >= 300 && time2 <= 400) {
+                na1 = 0.9;
+                down1 = 390;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 80);
+                localStorage.setItem("down1", 160000);
+
+                localStorage.setItem("time1", 300);
+                tim1 = 300;
+                part.innerHTML = "4";
+            }
+            if (time2 >= 400 && time2 <= 500) {
+                na1 = 0.9;
+                down1 = 390;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 70);
+                localStorage.setItem("down1", 140000);
+                localStorage.setItem("time1", 400);
+                tim1 = 400;
+                part.innerHTML = "5";
+            }
+            if (time2 >= 500 && time2 <= 600) {
+                na1 = 0.8;
+                down1 = 380;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 75);
+                localStorage.setItem("down1", 14000);
+                localStorage.setItem("time1", 500);
+                tim1 = 500;
+                part.innerHTML = "6";
+            }
+            if (time2 >= 600 && time2 <= 700) {
+                na1 = 0.8;
+                down1 = 380;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 70);
+                localStorage.setItem("down1", 14000);
+                localStorage.setItem("time1", 600);
+                tim1 = 600;
+                part.innerHTML = "7";
+            }
+            if (time2 >= 700 && time2 <= 800) {
+                na1 = 0.6;
+                down1 = 360;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 60);
+                localStorage.setItem("down1", 12000);
+                localStorage.setItem("time1", 700);
+                tim1 = 700;
+                part.innerHTML = "8";
+            }
+            if (time2 >= 800 && time2 <= 900) {
+                na1 = 0.5;
+                down1 = 300;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 50);
+                localStorage.setItem("down1", 12000);
+                localStorage.setItem("time1", 800);
+                tim1 = 800;
+                part.innerHTML = "9";
+            }
+            if (time2 >= 900 && time2 <= 10000) {
+                na1 = 0.3;
+                down1 = 140;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 30);
+                localStorage.setItem("down1", 10000);
+                localStorage.setItem("time1", 900);
+                tim1 = 900;
+                part.innerHTML = "10";
+            }
+            if (time2 >= 1000) {
+                localStorage.setItem("time1", 1000);
+                tim1 = 1000;
+                backlose.style.background = "green";
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                textlose.innerHTML = "شما بردی";
+
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+        }
+        var cleartime = setInterval(time11, 300);
+
+        function s1() {
+            p10 = p10 + 10;
+            a10.style.top = p10 + "%";
+
+            p9 = p9 + 10;
+            a9.style.top = p9 + "%";
+
+            p8 = p8 + 10;
+            a8.style.top = p8 + "%";
+
+            p7 = p7 + 10;
+            a7.style.top = p7 + "%";
+
+            p6 = p6 + 10;
+            a6.style.top = p6 + "%";
+
+            p5 = p5 + 10;
+            a5.style.top = p5 + "%";
+
+            p4 = p4 + 10;
+            a4.style.top = p4 + "%";
+
+            p3 = p3 + 10;
+            a3.style.top = p3 + "%";
+
+            p2 = p2 + 10;
+            a2.style.top = p2 + "%";
+
+            p1 = p1 + 10;
+            a1.style.top = p1 + "%";
+        }
+
+        function s2() {
+            setTimeout(function() {
+                p10 = 100;
+                a10.style.top = p10 + "%";
+            }, 500);
+
+            setTimeout(function() {
+                p9 = 100;
+                a9.style.top = p9 + "%";
+            }, 1000);
+            setTimeout(function() {
+                p8 = 100;
+                a8.style.top = p8 + "%";
+            }, 1500);
+            setTimeout(function() {
+                p7 = 100;
+                a7.style.top = p7 + "%";
+            }, 2000);
+            setTimeout(function() {
+                p6 = 100;
+                a6.style.top = p6 + "%";
+            }, 2500);
+            setTimeout(function() {
+                p5 = 100;
+                a5.style.top = p5 + "%";
+            }, 3000);
+            setTimeout(function() {
+                p4 = 100;
+                a4.style.top = p4 + "%";
+            }, 3500);
+            setTimeout(function() {
+                p3 = 100;
+                a3.style.top = p3 + "%";
+            }, 4000);
+            setTimeout(function() {
+                p2 = 100;
+                a2.style.top = p2 + "%";
+            }, 4500);
+            setTimeout(function() {
+                p1 = 100;
+                a1.style.top = p1 + "%";
+            }, 5000);
+        }
+        var cleardown = setInterval(s2, localStorage.getItem("down1"));
+
+        function jamp() {
+            navigator.vibrate(50);
+            do1.disabled = true;
+            do1.style.boxShadow = "0px 0px 10px 5px red";
+            element.style.top = 30 + "%";
+            do1.style.scale = "1.2";
+            do1.style.left = "51.5%";
+
+            setTimeout(function() {
+                do1.style.scale = "1";
+                do1.style.left = "50%";
+
+            }, 50);
+            setTimeout(function() {
+                element.style.top = 51 + "%";
+            }, down1);
+            setTimeout(function() {
+                do1.style.boxShadow = "0px 0px 10px 0px orange";
+                do1.disabled = false;
+            }, down1 + 100);
+        }
+
+        function read1() {
+            element1 = document.getElementById("a1");
+            formdata1 = document.getElementById("write1");
+            inmap1 = element1.getBoundingClientRect();
+            formdata1.innerHTML =
+                " Top: " +
+                Math.round(inmap1.top) +
+                " <br> Left: " +
+                Math.round(inmap1.left) +
+                " <br> Width: " +
+                Math.round(inmap1.width) +
+                " <br> Height: " +
+                Math.round(inmap1.height);
+            Left1 = Math.round(inmap1.left);
+            Top1 = Math.round(inmap1.top);
+        }
+        setInterval(read1, 0);
+
+        function read2() {
+            element2 = document.getElementById("a2");
+            formdata2 = document.getElementById("write2");
+            inmap2 = element2.getBoundingClientRect();
+            formdata2.innerHTML =
+                " Top: " +
+                Math.round(inmap2.top) +
+                " <br> Left: " +
+                Math.round(inmap2.left) +
+                " <br> Width: " +
+                Math.round(inmap2.width) +
+                " <br> Height: " +
+                Math.round(inmap2.height);
+            Left2 = Math.round(inmap2.left);
+            Top2 = Math.round(inmap2.top);
+        }
+        setInterval(read2, 0);
+
+        function read3() {
+            element3 = document.getElementById("a3");
+            formdata3 = document.getElementById("write3");
+            inmap3 = element3.getBoundingClientRect();
+            formdata3.innerHTML =
+                " Top: " +
+                Math.round(inmap3.top) +
+                " <br> Left: " +
+                Math.round(inmap3.left) +
+                " <br> Width: " +
+                Math.round(inmap3.width) +
+                " <br> Height: " +
+                Math.round(inmap3.height);
+            Left3 = Math.round(inmap3.left);
+            Top3 = Math.round(inmap3.top);
+        }
+        setInterval(read3, 0);
+
+        function read4() {
+            element4 = document.getElementById("a4");
+            formdata4 = document.getElementById("write4");
+            inmap4 = element4.getBoundingClientRect();
+            formdata4.innerHTML =
+                " Top: " +
+                Math.round(inmap4.top) +
+                " <br> Left: " +
+                Math.round(inmap4.left) +
+                " <br> Width: " +
+                Math.round(inmap4.width) +
+                " <br> Height: " +
+                Math.round(inmap4.height);
+            Left4 = Math.round(inmap4.left);
+            Top4 = Math.round(inmap4.top);
+        }
+        setInterval(read4, 0);
+
+        function read5() {
+            element5 = document.getElementById("a5");
+            formdata5 = document.getElementById("write5");
+            inmap5 = element5.getBoundingClientRect();
+            formdata5.innerHTML =
+                " Top: " +
+                Math.round(inmap5.top) +
+                " <br> Left: " +
+                Math.round(inmap5.left) +
+                " <br> Width: " +
+                Math.round(inmap5.width) +
+                " <br> Height: " +
+                Math.round(inmap5.height);
+            Left5 = Math.round(inmap5.left);
+            Top5 = Math.round(inmap5.top);
+        }
+        setInterval(read5, 0);
+
+        function read6() {
+            element6 = document.getElementById("a6");
+            formdata6 = document.getElementById("write6");
+            inmap6 = element6.getBoundingClientRect();
+            formdata6.innerHTML =
+                " Top: " +
+                Math.round(inmap6.top) +
+                " <br> Left: " +
+                Math.round(inmap6.left) +
+                " <br> Width: " +
+                Math.round(inmap6.width) +
+                " <br> Height: " +
+                Math.round(inmap6.height);
+            Left6 = Math.round(inmap6.left);
+            Top6 = Math.round(inmap6.top);
+        }
+        setInterval(read6, 0);
+
+        function read7() {
+            element7 = document.getElementById("a7");
+            formdata7 = document.getElementById("write7");
+            inmap7 = element7.getBoundingClientRect();
+            formdata7.innerHTML =
+                " Top: " +
+                Math.round(inmap7.top) +
+                " <br> Left: " +
+                Math.round(inmap7.left) +
+                " <br> Width: " +
+                Math.round(inmap7.width) +
+                " <br> Height: " +
+                Math.round(inmap7.height);
+            Left7 = Math.round(inmap7.left);
+            Top7 = Math.round(inmap7.top);
+        }
+        setInterval(read7, 0);
+
+        function read8() {
+            element8 = document.getElementById("a8");
+            formdata8 = document.getElementById("write8");
+            inmap8 = element8.getBoundingClientRect();
+            formdata8.innerHTML =
+                " Top: " +
+                Math.round(inmap8.top) +
+                " <br> Left: " +
+                Math.round(inmap8.left) +
+                " <br> Width: " +
+                Math.round(inmap8.width) +
+                " <br> Height: " +
+                Math.round(inmap8.height);
+            Left8 = Math.round(inmap8.left);
+            Top8 = Math.round(inmap8.top);
+        }
+        setInterval(read8, 0);
+
+        function read9() {
+            element9 = document.getElementById("a9");
+            formdata9 = document.getElementById("write9");
+            inmap9 = element9.getBoundingClientRect();
+            formdata9.innerHTML =
+                " Top: " +
+                Math.round(inmap9.top) +
+                " <br> Left: " +
+                Math.round(inmap9.left) +
+                " <br> Width: " +
+                Math.round(inmap9.width) +
+                " <br> Height: " +
+                Math.round(inmap9.height);
+            Left9 = Math.round(inmap9.left);
+            Top9 = Math.round(inmap9.top);
+        }
+        setInterval(read9, 0);
+
+        function read10() {
+            element10 = document.getElementById("a10");
+            formdata10 = document.getElementById("write10");
+            inmap10 = element10.getBoundingClientRect();
+            formdata10.innerHTML =
+                " Top: " +
+                Math.round(inmap10.top) +
+                " <br> Left: " +
+                Math.round(inmap10.left) +
+                " <br> Width: " +
+                Math.round(inmap10.width) +
+                " <br> Height: " +
+                Math.round(inmap10.height);
+            Left10 = Math.round(inmap10.left);
+            Top10 = Math.round(inmap10.top);
+        }
+        setInterval(read10, 0);
+
+        function read() {
+            element = document.getElementById("element");
+            formdata = document.getElementById("write");
+            inmap = element.getBoundingClientRect();
+            formdata.innerHTML =
+                " Top: " +
+                Math.round(inmap.top) +
+                " <br> Left: " +
+                Math.round(inmap.left) +
+                " <br> Width: " +
+                Math.round(inmap.width) +
+                " <br> Height: " +
+                Math.round(inmap.height);
+            Left = Math.round(inmap.left);
+            Top = Math.round(inmap.top);
+        }
+        setInterval(read, 0);
+
+        function process() {
+            Left += 10;
+            Top += 10;
+
+            Left1e = Left1;
+            Top1e = Top1;
+            Left1e += 20;
+            Top1e += 20;
+            //navigator.vibrate(100);
+            if (Left >= Left1 && Left <= Left1e && Top >= Top1 && Top <= Top1e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+            Left2e = Left2;
+            Top2e = Top2;
+            Left2e += 20;
+            Top2e += 20;
+            if (Left >= Left2 && Left <= Left2e && Top >= Top2 && Top <= Top2e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+
+            Left3e = Left3;
+            Top3e = Top3;
+            Left3e += 20;
+            Top3e += 20;
+
+            if (Left >= Left3 && Left <= Left3e && Top >= Top3 && Top <= Top3e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+            Left4e = Left4;
+            Top4e = Top4;
+            Left4e += 20;
+            Top4e += 20;
+
+            if (Left >= Left4 && Left <= Left4e && Top >= Top4 && Top <= Top4e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+            Left5e = Left5;
+            Top5e = Top5;
+            Left5e += 20;
+            Top5e += 20;
+
+            if (Left >= Left5 && Left <= Left5e && Top >= Top5 && Top <= Top5e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+            Left6e = Left6;
+            Top6e = Top6;
+            Left6e += 20;
+            Top6e += 20;
+
+            if (Left >= Left6 && Left <= Left6e && Top >= Top6 && Top <= Top6e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+            Left7e = Left7;
+            Top7e = Top7;
+            Left7e += 20;
+            Top7e += 20;
+
+            if (Left >= Left7 && Left <= Left7e && Top >= Top7 && Top <= Top7e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+            Left8e = Left8;
+            Top8e = Top8;
+            Left8e += 20;
+            Top8e += 20;
+
+            if (Left >= Left8 && Left <= Left8e && Top >= Top8 && Top <= Top8e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+            Left9e = Left9;
+            Top9e = Top9;
+            Left9e += 20;
+            Top9e += 20;
+
+            if (Left >= Left9 && Left <= Left9e && Top >= Top9 && Top <= Top9e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+            Left10e = Left10;
+            Top10e = Top10;
+            Left10e += 20;
+            Top10e += 20;
+
+            if (Left >= Left10 && Left <= Left10e && Top >= Top10 && Top <= Top10e) {
+                backlose.style.display = "block";
+                start1.style.display = "block";
+                setTimeout(function() {
+                    backlose.style.opacity = "90%";
+                    textlose.style.opacity = "100%";
+                    start1.style.opacity = "100%";
+                    loseoldtime.style.opacity = "100%";
+                    losetime.style.opacity = "100%";
+                    do1.style.opacity = "0%";
+                    element.style.opacity = "0%";
+                    col.style.opacity = "0%";
+                }, 0);
+
+                w.innerHTML = "lose";
+                clearInterval(speed);
+                clearInterval(cleardown);
+                clearInterval(cleartime);
+                clearInterval(clearload);
+            }
+
+            //element.style.left = tempX + "px";
+            // element.style.top = tempY + "px";
+
+            time.value = time2;
+            oldtime.value = tim1;
+
+            localStorage.setItem("time", time.value);
+
+            time2 = localStorage.getItem("time");
+
+            tim.innerHTML = time2;
+            loseoldtime.value = oldtime.value;
+            losetime.value = time.value;
+        }
+        setInterval(process, 0);
+
+        function str() {
+            if (tim1 >= 1000) {
+                localStorage.setItem("time", 0);
+                time2 = 0;
+                localStorage.setItem("time1", 0);
+                part.innerHTML = "1";
+                tim1 = 0;
+                na1 = 1;
+                down1 = 400;
+                element.style.transition = na1 + "s" + " " + "0s";
+                localStorage.setItem("speed1", 100);
+                localStorage.setItem("down1", 20000);
+                location.reload();
+            } else {
+                localStorage.setItem("time", tim1);
+                time2 = tim1;
+                location.reload();
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+</html>

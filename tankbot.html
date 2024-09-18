@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <style>
+        #body {
+            background-color: rgb(177, 120, 35);
+            overflow: hidden;
+            transition: 1s 0s;
+        }
+        
+        #tank1 {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(134, 17, 13);
+            border-radius: 8px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 70%;
+            transition: 0s 0s;
+        }
+        
+        #uptank1 {
+            width: 28px;
+            height: 28px;
+            background-color: rgb(151, 30, 26);
+            border-radius: 6px;
+            position: absolute;
+            margin-left: 6px;
+            margin-top: 6px;
+            animation: a1 0.5s infinite;
+            text-align: center;
+            transition: 0.5s 0s;
+        }
+        
+        @keyframes a1 {
+            20% {
+                width: 25px;
+                margin-left: 7.8px;
+            }
+        }
+        
+        #lotank1 {
+            width: 10px;
+            height: 35px;
+            background-color: rgb(168, 23, 18);
+            border-radius: 2px;
+            margin-top: -10px;
+            position: absolute;
+            margin-left: 15px;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            animation: a2 0.5s infinite;
+            text-align: center;
+            transition: 0.5s 0s;
+        }
+        
+        @keyframes a2 {
+            20% {
+                height: 30px;
+                margin-top: -0px;
+            }
+        }
+        
+        #tank2 {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(27, 12, 158);
+            border-radius: 8px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transition: 0.01s 0s;
+            ;
+        }
+        
+        #uptank2 {
+            width: 28px;
+            height: 28px;
+            background-color: rgb(54, 52, 184);
+            border-radius: 6px;
+            position: absolute;
+            margin-left: 6px;
+            margin-top: 6px;
+            animation: b1 0.5s infinite;
+            text-align: center;
+            transition: 0.5s 0s;
+        }
+        
+        @keyframes b1 {
+            20% {
+                width: 25px;
+                margin-left: 7.5px;
+            }
+        }
+        
+        #lotank2 {
+            width: 10px;
+            height: 35px;
+            background-color: rgb(34, 22, 143);
+            border-radius: 2px;
+            margin-top: 15px;
+            position: absolute;
+            margin-left: 15px;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            animation: b2 0.5s infinite;
+            text-align: center;
+            transition: 0.5s 0s;
+        }
+        
+        @keyframes b2 {
+            20% {
+                height: 30px;
+                margin-top: 10px;
+            }
+        }
+        
+        #col {
+            width: 100px;
+            height: 100px;
+            transform: rotate(0deg) translate(-50%, 50%);
+            position: absolute;
+            left: 0%;
+            top: -1%;
+            margin-left: 63.5px;
+            z-index: -1;
+            transition: 0.5s 0s;
+        }
+        
+        #a11 {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(54, 52, 184);
+            margin-top: 0px;
+            position: absolute;
+            top: 50%;
+            box-shadow: 0px 0px 10px 1px rgb(54, 52, 184);
+        }
+        
+        #a21 {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(54, 52, 184);
+            margin-top: 0px;
+            position: absolute;
+            top: 50%;
+            box-shadow: 0px 0px 10px 1px rgb(54, 52, 184);
+        }
+        
+        #a32 {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(184, 52, 52);
+            margin-top: -0px;
+            position: absolute;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px rgb(184, 52, 52);
+        }
+        
+        #a42 {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(184, 52, 52);
+            margin-top: -0px;
+            position: absolute;
+            top: 0%;
+            box-shadow: 0px 0px 10px 1px rgb(184, 52, 52);
+        }
+        
+        #r1 {
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 85%;
+            z-index: 10;
+        }
+        
+        #r2 {
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            z-index: 10;
+            opacity: 0%;
+        }
+        
+        #write1,
+        #write2,
+        #write11,
+        #write21,
+        #write32,
+        #write42,
+        #writering,
+        #writed1,
+        #writed2 {
+            display: none;
+        }
+        
+        #box {
+            height: 1000px;
+            width: 99%;
+            border: 2px solid rgb(0, 0, 0);
+            transition: 0.2s 0s;
+            transform: translate(-0%, 0%);
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            opacity: 0%;
+            z-index: -0;
+        }
+        
+        #score1 {
+            width: 20px;
+            text-align: center;
+            transform: translate(-50%, 50%) rotate(-90deg);
+            position: absolute;
+            left: 10%;
+            top: 55%;
+            border: 2px solid rgb(185, 38, 38);
+            padding: 5px;
+            border-radius: 10px;
+        }
+        
+        #score2 {
+            width: 20px;
+            text-align: center;
+            transform: translate(-50%, 50%) rotate(-90deg);
+            position: absolute;
+            left: 10%;
+            top: 36%;
+            border: 2px solid rgb(32, 35, 192);
+            padding: 5px;
+            border-radius: 10px;
+        }
+        
+        #backstart {
+            width: 100%;
+            height: 600px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: chartreuse;
+            text-align: center;
+            padding-top: 600px;
+            margin-top: -1220px;
+            z-index: 11;
+            font-size: 40px;
+            cursor: pointer;
+            transition: 1s 0s;
+        }
+        
+        #titelwin {
+            width: auto;
+            padding: 5px;
+            transform: translate(-50%, 0%);
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            text-align: center;
+            z-index: 11;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 1s 0s;
+            border: 2px solid white;
+            opacity: 100%;
+        }
+        
+        #v1 {
+            width: 50px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 15%;
+            top: 86%;
+        }
+        
+        #v2 {
+            width: 50px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 15%;
+            top: 10%;
+        }
+        
+        #de1 {
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, 0%);
+            position: absolute;
+            left: 15%;
+            top: 80%;
+            border-radius: 20px;
+            background-color: rgb(185, 38, 38);
+            border: transparent;
+            box-shadow: -2px 2px 5px 1px rgb(43, 41, 35);
+            transition: 0.5s 0s;
+            cursor: pointer;
+        }
+        
+        #de2 {
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, 0%);
+            position: absolute;
+            left: 15%;
+            top: 16%;
+            border-radius: 20px;
+            background-color: rgb(40, 38, 185);
+            border: transparent;
+            box-shadow: 2px -2px 5px 1px rgb(43, 41, 35);
+            transition: 0.5s 0s;
+            cursor: pointer;
+        }
+        
+        #d1 {
+            width: 50px;
+            height: 0px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border: 2px solid white;
+            box-shadow: 0px 0px 10px 1px white;
+            display: none;
+        }
+        
+        #d2 {
+            width: 50px;
+            height: 0px;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            left: 50%;
+            top: 70%;
+            border: 2px solid white;
+            box-shadow: 0px 0px 10px 1px white;
+            display: none;
+        }
+    </style>
+    <div onclick="start()" id="backstart">شروع</div>
+    <p id="titelwin"></p>
+    <div id="tank2">
+        <div id="uptank2"></div>
+        <div id="lotank2"></div>
+    </div>
+
+    <div id="tank1">
+        <div id="uptank1"></div>
+        <div id="lotank1"></div>
+    </div>
+    <h2>
+        <input id="r2" type="range" value="50" max="100" canal="4" onmouseup="mosout2()" />
+    </h2>
+    <h1>
+        <input id="r1" type="range" value="50" max="100" canal="4" onmouseup="mosout1()" />
+    </h1>
+    <div id="write1"></div>
+    <div id="write2"></div>
+    <div id="write11"></div>
+    <div id="write21"></div>
+    <div id="write32"></div>
+    <div id="write42"></div>
+    <div id="writering"></div>
+    <div id="writed1"></div>
+    <div id="writed2"></div>
+
+    <div id="col">
+        <h3 id="a11"></h3>
+        <h3 id="a21"></h3>
+        <h3 id="a32"></h3>
+        <h3 id="a42"></h3>
+    </div>
+    <div id="score2">30</div>
+    <div id="score1">30</div>
+
+    <div id="box"></div>
+
+    <meter id="v2" value="0" min="0" max="100"></meter>
+    <meter id="v1" value="0" min="0" max="100"></meter>
+
+    <button id="de2" onclick="def2()"></button>
+
+    <button id="de1" onclick="def1()"></button>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        var p1 = 0;
+        var p2 = 0;
+        var p3 = 0;
+        var p4 = 0;
+        var p5 = 0;
+        var p6 = 0;
+        var p7 = 0;
+        var p8 = 0;
+        var p9 = 0;
+        var p10 = 0;
+
+        var element11;
+        var inmap11;
+        var formdata11;
+        var inmap22;
+        var element22;
+        var formdata22;
+
+        var inmap1;
+        var element1;
+        var formdata1;
+        var inmap2;
+        var element2;
+        var formdata2;
+        var inmap3;
+        var element3;
+        var formdata3;
+        var inmap4;
+        var element4;
+        var formdata4;
+
+        var inmapr;
+        var elementr;
+        var formdatar;
+
+        var inmapd1;
+        var elementd1;
+        var formdatad1;
+
+        var inmapd2;
+        var elementd2;
+        var formdatad2;
+
+        var Left1;
+        var Top1;
+        var Left2;
+        var Top2;
+        var Left3;
+        var Top3;
+        var Left4;
+        var Top4;
+
+        var Left11;
+        var Top11;
+        var Left22;
+        var Top22;
+
+        var Leftring;
+        var Topring;
+
+        var Leftd1;
+        var Topd1;
+
+        var Leftd2;
+        var Topd2;
+
+        var m1 = 30;
+        var m2 = 30;
+
+        var x1 = 50;
+        var x2 = 50;
+        var pro;
+        var s2;
+        var s1;
+
+        var timefull1 = 0;
+        var timefull2 = 0;
+
+        var settime1;
+        var settime2;
+
+        var time1 = 0;
+        var time2 = 0;
+        var bot;
+
+        function def1() {
+            time1 = 1;
+            de1.disabled = true;
+            de1.style.opacity = "30%";
+        }
+
+        function def2() {
+            time2 = 1;
+            de2.disabled = true;
+            de2.style.opacity = "30%";
+        }
+
+        function start() {
+            settime1 = setInterval(settime1, 500);
+            settime2 = setInterval(settime2, 500);
+            backstart.style.opacity = "0%";
+            setTimeout(function() {
+                backstart.style.display = "none";
+                a32.style.cssText = "margin-top: -50px;";
+                a42.style.cssText = "margin-top: -50px;";
+            }, 1000);
+            pro = setInterval(pro, 0);
+            s2 = setInterval(s2, 1500);
+            s1 = setInterval(s1, 20);
+            m1 = 30;
+            score1.innerHTML = m1;
+            m2 = 30;
+            score2.innerHTML = m2;
+            titelwin.style.opacity = "0%";
+            de1.disabled = true;
+            de2.disabled = true;
+            de1.style.opacity = "30%";
+            de2.style.opacity = "30%";
+            v1.value = 0;
+            v2.value = 0;
+            time1 = 0;
+            time2 = 0;
+            r2.value = 50;
+        }
+
+        function settime1() {
+            if (v1.value == 0) {
+                time1 = 0;
+            }
+            if (v1.value >= 0 && time1 == 0) {
+                timefull1++;
+                v1.value = timefull1;
+            }
+
+            if (v1.value <= 100 && time1 == 1) {
+                timefull1--;
+                timefull1--;
+                v1.value = timefull1;
+            }
+        }
+
+        function settime2() {
+            if (v2.value == 0) {
+                time2 = 0;
+            }
+            if (v2.value >= 0 && time2 == 0) {
+                timefull2++;
+                v2.value = timefull2;
+            }
+
+            if (v2.value <= 100 && time2 == 1) {
+                timefull2--;
+                timefull2--;
+                v2.value = timefull2;
+            }
+        }
+
+        const h1 = document.querySelector("h1");
+        const h2 = document.querySelector("h2");
+
+        h1.addEventListener("touchend", handler1);
+
+        function handler1(event) {
+            r1.value = 50;
+        }
+        setInterval(function() {
+            bot = Math.floor(Math.random() * (100 - 0) - 0);
+            r2.value = bot;
+            if (bot >= 40 && bot <= 60) {
+                if (Left22 > Left11) {
+                    Left22--;
+                    Left11 = Left22;
+                    tank2.style.left = Left11 + "px";
+                }
+                if (Left22 < Left11) {
+                    Left22++;
+                    Left11 = Left22;
+                    tank2.style.left = Left11 + "px";
+                }
+
+            }
+            if (v2.value == 100) {
+                document.getElementById('de2').click();
+            }
+
+        }, 500);
+
+
+
+
+        // h2.addEventListener("touchend", handler2);
+
+        // function handler2(event) {
+        //     r2.value = 50;
+        // }
+
+        function mosout1() {
+            r1.value = 50;
+        }
+
+        function mosout2() {
+            r2.value = 50;
+        }
+
+        function s11() {
+            if (r1.value > 60 && Left11 <= Leftring + 230) {
+                x1++;
+                tank1.style.left = x1 + "%";
+            }
+            if (r1.value < 40 && Left11 >= Leftring - 150) {
+                x1--;
+                tank1.style.left = x1 + "%";
+            }
+        }
+        setInterval(s11, 20);
+
+        function s22() {
+            if (r2.value > 60 && Left22 <= Leftring + 230) {
+                x2++;
+                tank2.style.left = x2 + "%";
+            }
+
+            if (r2.value < 40 && Left22 >= Leftring - 20) {
+                x2--;
+                tank2.style.left = x2 + "%";
+            }
+        }
+        setInterval(s22, 20);
+
+        function s1() {
+            a11.style.width = "10px";
+            a21.style.width = "10px";
+            p1 = p1 + 10;
+            a11.style.top = p1 + "px";
+            p2 = p2 + 10;
+            a21.style.top = p2 + "px";
+
+            a42.style.width = "10px";
+            a32.style.width = "10px";
+            p5 = p5 - 10;
+            a32.style.top = p5 + "px";
+            p7 = p7 - 10;
+            a42.style.top = p7 + "px";
+        }
+
+        function s2() {
+            a11.style.width = "0px";
+            a21.style.width = "0px";
+            setTimeout(function() {
+                p1 = Top22;
+                a11.style.top = p1 + "px";
+                p3 = Left22;
+                a11.style.left = p3 + "px";
+            }, 100);
+            setTimeout(function() {
+                p2 = Top22;
+                a21.style.top = p2 + "px";
+                p4 = Left22;
+                a21.style.left = p4 + "px";
+            }, 1100);
+
+            a32.style.width = "0px";
+            a42.style.width = "0px";
+            setTimeout(function() {
+                p5 = Top11;
+                a32.style.top = p5 + "px";
+                p6 = Left11;
+                a32.style.left = p6 + "px";
+            }, 100);
+            setTimeout(function() {
+                p7 = Top11;
+                a42.style.top = p7 + "px";
+                p8 = Left11;
+                a42.style.left = p8 + "px";
+            }, 1100);
+        }
+
+        function read1() {
+            element1 = document.getElementById("a11");
+            formdata1 = document.getElementById("write11");
+            inmap1 = element1.getBoundingClientRect();
+            formdata1.innerHTML =
+                " Top: " +
+                Math.round(inmap1.top) +
+                " <br> Left: " +
+                Math.round(inmap1.left) +
+                " <br> Width: " +
+                Math.round(inmap1.width) +
+                " <br> Height: " +
+                Math.round(inmap1.height);
+            Left1 = Math.round(inmap1.left);
+            Top1 = Math.round(inmap1.top);
+        }
+        setInterval(read1, 0);
+
+        function read2() {
+            element2 = document.getElementById("a21");
+            formdata2 = document.getElementById("write21");
+            inmap2 = element2.getBoundingClientRect();
+            formdata2.innerHTML =
+                " Top: " +
+                Math.round(inmap2.top) +
+                " <br> Left: " +
+                Math.round(inmap2.left) +
+                " <br> Width: " +
+                Math.round(inmap2.width) +
+                " <br> Height: " +
+                Math.round(inmap2.height);
+            Left2 = Math.round(inmap2.left);
+            Top2 = Math.round(inmap2.top);
+        }
+        setInterval(read2, 0);
+
+        function read4() {
+            element4 = document.getElementById("a42");
+            formdata4 = document.getElementById("write42");
+            inmap4 = element4.getBoundingClientRect();
+            formdata4.innerHTML =
+                " Top: " +
+                Math.round(inmap4.top) +
+                " <br> Left: " +
+                Math.round(inmap4.left) +
+                " <br> Width: " +
+                Math.round(inmap4.width) +
+                " <br> Height: " +
+                Math.round(inmap4.height);
+            Left4 = Math.round(inmap4.left);
+            Top4 = Math.round(inmap4.top);
+        }
+        setInterval(read4, 0);
+
+        function read3() {
+            element3 = document.getElementById("a32");
+            formdata3 = document.getElementById("write32");
+            inmap3 = element3.getBoundingClientRect();
+            formdata3.innerHTML =
+                " Top: " +
+                Math.round(inmap3.top) +
+                " <br> Left: " +
+                Math.round(inmap3.left) +
+                " <br> Width: " +
+                Math.round(inmap3.width) +
+                " <br> Height: " +
+                Math.round(inmap3.height);
+            Left3 = Math.round(inmap3.left);
+            Top3 = Math.round(inmap3.top);
+        }
+        setInterval(read3, 0);
+
+        function read22() {
+            element22 = document.getElementById("tank2");
+            formdata22 = document.getElementById("write2");
+            inmap22 = element22.getBoundingClientRect();
+            formdata22.innerHTML =
+                " Top: " +
+                Math.round(inmap22.top) +
+                " <br> Left: " +
+                Math.round(inmap22.left) +
+                " <br> Width: " +
+                Math.round(inmap22.width) +
+                " <br> Height: " +
+                Math.round(inmap22.height);
+            Left22 = Math.round(inmap22.left);
+            Top22 = Math.round(inmap22.top);
+        }
+        setInterval(read22, 0);
+
+        function read11() {
+            element11 = document.getElementById("tank1");
+            formdata11 = document.getElementById("write1");
+            inmap11 = element11.getBoundingClientRect();
+            formdata1.innerHTML =
+                " Top: " +
+                Math.round(inmap11.top) +
+                " <br> Left: " +
+                Math.round(inmap11.left) +
+                " <br> Width: " +
+                Math.round(inmap11.width) +
+                " <br> Height: " +
+                Math.round(inmap11.height);
+            Left11 = Math.round(inmap11.left);
+            Top11 = Math.round(inmap11.top);
+        }
+        setInterval(read11, 0);
+
+        function readring() {
+            elementr = document.getElementById("r1");
+            formdatar = document.getElementById("writering");
+            inmapr = elementr.getBoundingClientRect();
+            formdatar.innerHTML =
+                " Top: " +
+                Math.round(inmapr.top) +
+                " <br> Left: " +
+                Math.round(inmapr.left) +
+                " <br> Width: " +
+                Math.round(inmapr.width) +
+                " <br> Height: " +
+                Math.round(inmapr.height);
+            Leftring = Math.round(inmapr.left);
+            Topring = Math.round(inmapr.top);
+        }
+        setInterval(readring, 0);
+
+        function readdefa1() {
+            elementd1 = document.getElementById("d1");
+            formdatad1 = document.getElementById("writed1");
+            inmapd1 = elementd1.getBoundingClientRect();
+            formdatad1.innerHTML =
+                " Top: " +
+                Math.round(inmapd1.top) +
+                " <br> Left: " +
+                Math.round(inmapd1.left) +
+                " <br> Width: " +
+                Math.round(inmapd1.width) +
+                " <br> Height: " +
+                Math.round(inmapd1.height);
+            Leftd1 = Math.round(inmapd1.left);
+            Topd1 = Math.round(inmapd1.top);
+        }
+        setInterval(readdefa1, 0);
+
+        function readdefa2() {
+            elementd2 = document.getElementById("d2");
+            formdatad2 = document.getElementById("writed2");
+            inmapd2 = elementd2.getBoundingClientRect();
+            formdatad2.innerHTML =
+                " Top: " +
+                Math.round(inmapd2.top) +
+                " <br> Left: " +
+                Math.round(inmapd2.left) +
+                " <br> Width: " +
+                Math.round(inmapd2.width) +
+                " <br> Height: " +
+                Math.round(inmapd2.height);
+            Leftd2 = Math.round(inmapd2.left);
+            Topd2 = Math.round(inmapd2.top);
+        }
+        setInterval(readdefa2, 0);
+
+        function pro() {
+            if (Left1 >= Leftd1 && Left1 <= Leftd1 + 50 && Top1 >= Topd1 - 20) {
+                navigator.vibrate(80);
+                p1 = Top22;
+                a11.style.top = p1 + "px";
+                p3 = Left22;
+                a11.style.left = p3 + "px";
+                d1.style.cssText = "box-shadow: 0px 0px 40px 10px white;";
+                setTimeout(function() {
+                    d1.style.cssText = "box-shadow: 0px 0px 10px 1px white;";
+                }, 100);
+            }
+            if (Left2 >= Leftd1 && Left2 <= Leftd1 + 50 && Top2 >= Topd1 - 20) {
+                navigator.vibrate(80);
+                p2 = Top22;
+                a21.style.top = p2 + "px";
+                p4 = Left22;
+                a21.style.left = p4 + "px";
+                d1.style.cssText = "box-shadow: 0px 0px 40px 10px white;";
+                setTimeout(function() {
+                    d1.style.cssText = "box-shadow: 0px 0px 10px 1px white;";
+                }, 100);
+            }
+            if (Left3 >= Leftd2 && Left3 <= Leftd2 + 50 && Top3 <= Topd2 + 10) {
+                navigator.vibrate(80);
+                p5 = Top11;
+                a32.style.top = p5 + "px";
+                p6 = Left11;
+                a32.style.left = p6 + "px";
+                d2.style.cssText = "box-shadow: 0px 0px 40px 10px white;";
+                setTimeout(function() {
+                    d2.style.cssText = "box-shadow: 0px 0px 10px 1px white;";
+                }, 100);
+            }
+            if (Left4 >= Leftd2 && Left4 <= Leftd2 + 50 && Top4 <= Topd2 + 10) {
+                navigator.vibrate(80);
+                p7 = Top11;
+                a42.style.top = p7 + "px";
+                p8 = Left11;
+                a42.style.left = p8 + "px";
+                d2.style.cssText = "box-shadow: 0px 0px 40px 10px white;";
+                setTimeout(function() {
+                    d2.style.cssText = "box-shadow: 0px 0px 10px 1px white;";
+                }, 100);
+            }
+            d1.style.left = Left11 + 20 + "px";
+            d1.style.top = Top11 - 20 + "px";
+            d2.style.left = Left22 + 20 + "px";
+            d2.style.top = Top22 + 50 + "px";
+
+            if (time1 == 1) {
+                de1.disabled = true;
+                de1.style.opacity = "30%";
+            }
+            if (time2 == 1) {
+                de2.disabled = true;
+                de2.style.opacity = "30%";
+            }
+            if (time1 == 1) {
+                d1.style.display = "block";
+            }
+            if (time1 == 0) {
+                d1.style.display = "none";
+            }
+            if (time2 == 1) {
+                d2.style.display = "block";
+            }
+            if (time2 == 0) {
+                d2.style.display = "none";
+            }
+            if (v1.value == 100 && time1 == 0) {
+                de1.disabled = false;
+                de1.style.opacity = "100%";
+            }
+            if (v2.value == 100 && time2 == 0) {
+                de2.disabled = false;
+                de2.style.opacity = "100%";
+            }
+            if (m1 <= 1) {
+                titelwin.style.color = "blue";
+                titelwin.innerHTML = "آبی برد";
+                titelwin.style.opacity = "100%";
+                backstart.style.display = "block";
+                setTimeout(function() {
+                    backstart.style.opacity = "100%";
+                }, 100);
+                tank1.style.left = "50%";
+                tank2.style.left = "50%";
+            }
+            if (m2 <= 1) {
+                titelwin.style.color = "red";
+                titelwin.innerHTML = "قرمز برد";
+                titelwin.style.opacity = "100%";
+                backstart.style.display = "block";
+                setTimeout(function() {
+                    backstart.style.opacity = "100%";
+                }, 100);
+                tank1.style.left = "50%";
+                tank2.style.left = "50%";
+            }
+            if (
+                Top3 >= Top1 &&
+                Top3 <= Top1 + 20 &&
+                Left3 >= Left1 &&
+                Left3 <= Left1 + 20
+            ) {
+                a11.style.width = "0px";
+                a32.style.width = "0px";
+
+                p1 = Top22;
+                a11.style.top = p1 + "px";
+                p3 = Left22;
+                a11.style.left = p3 + "px";
+
+                p5 = Top11;
+                a32.style.top = p5 + "px";
+                p6 = Left11;
+                a32.style.left = p6 + "px";
+            }
+            if (
+                Top2 >= Top4 &&
+                Top2 <= Top4 + 20 &&
+                Left2 >= Left4 &&
+                Left2 <= Left4 + 20
+            ) {
+                a21.style.width = "0px";
+                a42.style.width = "0px";
+
+                p7 = Top11;
+                a42.style.top = p7 + "px";
+                p8 = Left11;
+                a42.style.left = p8 + "px";
+
+                p2 = Top22;
+                a21.style.top = p2 + "px";
+                p4 = Left22;
+                a21.style.left = p4 + "px";
+            }
+            if (
+                Top3 >= Top22 &&
+                Top3 <= Top22 + 30 &&
+                Left3 >= Left22 - 10 &&
+                Left3 <= Left22 + 40
+            ) {
+                m2 -= 1.02211111111333;
+                score2.innerHTML = Math.round(m2);
+                navigator.vibrate(80);
+                p5 = Top11;
+                a32.style.top = p5 + "px";
+                p6 = Left11;
+                a32.style.left = p6 + "px";
+                box.style.cssText = "opacity: 40%;background:blue; ";
+                setTimeout(function() {
+                    box.style.cssText = "opacity: 0%; ";
+                }, 300);
+            }
+            if (
+                Top4 >= Top22 &&
+                Top4 <= Top22 + 30 &&
+                Left4 >= Left22 - 10 &&
+                Left4 <= Left22 + 40
+            ) {
+                m2 -= 1.02211111111333;
+                score2.innerHTML = Math.round(m2);
+                navigator.vibrate(80);
+                p7 = Top11;
+                a42.style.top = p7 + "px";
+                p8 = Left11;
+                a42.style.left = p8 + "px";
+                box.style.cssText = "opacity: 40%;background:blue; ";
+                setTimeout(function() {
+                    box.style.cssText = "opacity: 0%; ";
+                }, 300);
+            }
+            if (
+                Top1 >= Top11 &&
+                Top1 <= Top11 + 30 &&
+                Left1 >= Left11 - 10 &&
+                Left1 <= Left11 + 40
+            ) {
+                m1 -= 1.02211111111333;
+                score1.innerHTML = Math.round(m1);
+                navigator.vibrate(80);
+                p1 = Top22;
+                a11.style.top = p1 + "px";
+                p3 = Left22;
+                a11.style.left = p3 + "px";
+                box.style.cssText = "opacity: 40%;background:red; ";
+                setTimeout(function() {
+                    box.style.cssText = "opacity: 0%; ";
+                }, 300);
+            }
+            if (
+                Top2 >= Top11 &&
+                Top2 <= Top11 + 30 &&
+                Left2 >= Left11 - 10 &&
+                Left2 <= Left11 + 40
+            ) {
+                m1 -= 1.02211111111333;
+                score1.innerHTML = Math.round(m1);
+                navigator.vibrate(80);
+                p2 = Top22;
+                a21.style.top = p2 + "px";
+                p4 = Left22;
+                a21.style.left = p4 + "px";
+                box.style.cssText = "opacity: 40%;background:red; ";
+                setTimeout(function() {
+                    box.style.cssText = "opacity: 0%; ";
+                }, 300);
+            }
+        }
+    </script>
+</body>
+
+</html>
